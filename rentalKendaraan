@@ -1,0 +1,172 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+
+char nama[50],asal,alamat,jenisKelamin;
+int id,hp,menu;
+
+void login();
+void dataDiri();
+void menuMotor();
+void menuMobil();
+void motorHonda();
+void motorYamaha();
+void motorKawasaki();
+void motorPrestige();
+
+int main()
+{
+    dataDiri();
+
+    return(0);
+}
+
+ void dataDiri()
+ {
+    pilihan:
+
+        printf("Menu            :\n");
+        printf("===============================\n");
+        printf("  01. Motor\n");
+        printf("  02. Mobil\n");
+        printf("===============================\n");
+        printf("Pilih Menu      : ");
+        scanf("%d", &menu);
+        printf("===============================\n");
+        system("cls");
+        switch(menu)
+        {
+        case 1:
+            menuMotor();
+            break;
+        case 2:
+            menuMobil();
+            break;
+        default:
+            printf("Menu yang Anda Input Salah\n");
+            printf("Masukkan Menu Kembali\n");
+            goto pilihan;
+        }
+
+}
+
+void menuMotor()
+{
+    menumotor:
+
+        printf("===============================\n");
+        printf("        DAFTAR MERK MOTOR      \n");
+        printf("===============================\n");
+        printf("1. Honda");
+        printf("2. Yamaha");
+        printf("3. Kawasaki");
+        printf("4. Prestige");
+        printf("===============================\n");
+        printf("Pilih Menu : ");
+        scanf("%d", menu);
+        printf("===============================\n");
+        system("cls");
+        switch(menu)
+        {
+        case 1:
+            motorHonda();
+            break;
+        case 2:
+            motorYamaha();
+            break;
+        case 3:
+            motorKawasaki();
+            break;
+        case 4:
+            motorPrestige();
+            break;
+        }
+}
+
+void motorHonda()
+{
+    motorhonda:
+
+        printf("=============================================\n");
+        printf("              DAFTAR MOTOR HONDA             \n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Nama Motor : Honda Scoopy                  |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Tahun                  : 2017              |\n");
+        printf("|Warna                  : Hitam             |\n");
+        printf("|Odometer               : 3098 KM           |\n");
+        printf("|Tgl Service Terakhir   : 12/2/2020         |\n");
+        printf("|Kelayakan              : 95%               |\n");
+        printf("|Harga Sewa             : Rp.40.000/day     |\n");
+        printf("|-------------------------------------------|\n");
+
+}
+
+void motorYamaha()
+{
+    motoryamaha:
+
+        printf("=============================================\n");
+        printf("            DAFTAR MOTOR YAMAHA              \n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Nama Motor :                               |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Tahun                  :                   |\n");
+        printf("|Warna                  :                   |\n");
+        printf("|Odometer               :                   |\n");
+        printf("|Tgl Service Terakhir   :                   |\n");
+        printf("|Kelayakan              :                   |\n");
+        printf("|Harga Sewa             :                   |\n");
+        printf("|-------------------------------------------|\n");
+
+}
+
+void motorKawasaki()
+{
+    motorkawasaki:
+
+        printf("=============================================\n");
+        printf("            DAFTAR MOTOR KAWASAKI            \n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Nama Motor :                               |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Tahun                  :                   |\n");
+        printf("|Warna                  :                   |\n");
+        printf("|Odometer               :                   |\n");
+        printf("|Tgl Service Terakhir   :                   |\n");
+        printf("|Kelayakan              :                   |\n");
+        printf("|Harga Sewa             :                   |\n");
+        printf("|-------------------------------------------|\n");
+}
+
+void motorPrestige()
+{
+    motorPrestige:
+
+        printf("=============================================\n");
+        printf("            DAFTAR MOTOR PRESTIGE            \n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Nama Motor :                               |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Tahun                  :                   |\n");
+        printf("|Warna                  :                   |\n");
+        printf("|Odometer               :                   |\n");
+        printf("|Tgl Service Terakhir   :                   |\n");
+        printf("|Kelayakan              :                   |\n");
+        printf("|Harga Sewa             :                   |\n");
+        printf("|-------------------------------------------|\n");
+}
+
+void menuMobil()
+{
+    menumobil:
+
+        printf("===============================\n");
+        printf("         DAFTAR MOBIL          \n");
+        printf("===============================\n");
+}
