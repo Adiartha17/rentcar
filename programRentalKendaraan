@@ -22,52 +22,7 @@ int main()
     return(0);
 }
 
-void dataDiri()
-{
-    datadiri:
 
-        printf("===============================\n");
-        printf("    Masukkan Data Diri Anda    \n");
-        printf("===============================\n");
-        printf("Nama            : ");
-        scanf("%s", &nama);
-        printf("Asal            : ");
-        scanf("%s", &asal);
-        printf("Alamat          : ");
-        scanf("%s", &alamat);
-        printf("Jenis Kelamin   : ");
-        scanf("%s", &jenisKelamin);
-        printf("KTP/Passport    : ");
-        scanf("%d", &id);
-        printf("No. HP          : ");
-        scanf("%d", &hp);
-
-    pilihan:
-
-        printf("Menu            :\n");
-        printf("===============================\n");
-        printf("  01. Motor\n");
-        printf("  02. Mobil\n");
-        printf("===============================\n");
-        printf("Pilih Menu      : ");
-        scanf("%d", &menu);
-        printf("===============================\n");
-        system("cls");
-        switch(menu)
-        {
-        case 1:
-            menuMotor();
-            break;
-        case 2:
-            menuMobil();
-            break;
-        default:
-            printf("Menu yang Anda Input Salah\n");
-            printf("Masukkan Menu Kembali\n");
-            goto pilihan;
-        }
-
-}
 
 void menuMotor()
 {
