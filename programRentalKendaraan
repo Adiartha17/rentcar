@@ -17,7 +17,7 @@ void motorPrestige();
 
 int main()
 {
-    dataDiri();
+    login();
 
     return(0);
 }
