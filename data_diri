@@ -255,10 +255,10 @@ void menuMotor()
         printf("===============================\n");
         printf("        DAFTAR MERK MOTOR      \n");
         printf("===============================\n");
-        printf("1. Honda");
-        printf("2. Yamaha");
-        printf("3. Kawasaki");
-        printf("4. Prestige");
+        printf("1. Honda\n");
+        printf("2. Yamaha\n");
+        printf("3. Kawasaki\n");
+        printf("4. Prestige\n");
         printf("===============================\n");
         printf("Pilih Menu : ");
         scanf("%d", &menu);
@@ -283,21 +283,40 @@ void menuMotor()
 
 void motorHonda()
 {
+    char decision;
     motorhonda:
 
         printf("=============================================\n");
         printf("              DAFTAR MOTOR HONDA             \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|Nama Motor : Honda Scoopy                  |\n");
+        printf("|1. Nama Motor : Honda Scoopy               |\n");
         printf("|-------------------------------------------|\n");
         printf("|Tahun                  : 2017              |\n");
         printf("|Warna                  : Hitam             |\n");
         printf("|Odometer               : 3098 KM           |\n");
         printf("|Tgl Service Terakhir   : 12/2/2020         |\n");
-        printf("|Kelayakan              : 95%               |\n");
+        printf("|Kelayakan              : 95/100            |\n");
         printf("|Harga Sewa             : Rp.40.000/day     |\n");
         printf("|-------------------------------------------|\n");
+        printf("Select your vehicle : ");
+        scanf("%d", &pilihanmotor);
+        switch(pilihanmotor)
+        {
+        case 1:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%c' ", pilihanmotor);
+                printf("Press Enter to Return to the Main Menu");
+                system("cls");
+                menuMotor();
+                break;
+                }
+            break;
+        }
 
 }
 
