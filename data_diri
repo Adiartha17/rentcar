@@ -15,6 +15,7 @@ int id,hp,menu;
 
 void login();
 void reg();
+void rules();
 void dataDiri();
 void menuMotor();
 void menuMobil();
@@ -92,7 +93,7 @@ void login()
             system("cls");
             printf("\n\n\n\t\t\t~~~YOU HAVE LOGGED IN SUCCESSFULLY!~~~");
             printf("\n\n\n\t\t\t                WELCOME!");
-            dataDiri();
+            Rules();
            break;
           }
         else if(checku==0&&checkp!=0)
@@ -174,34 +175,59 @@ void login()
     getch();
   }
   
+void rules()
+{
+    rules:
+
+        printf("\n \n");
+        printf("=========================================================================================================================================\n");
+        printf("                                                                RULES                                                                    \n");
+        printf("=========================================================================================================================================\n");
+        printf("1.Vehicle renters must have a Driving License in accordance with the car being rented\n");
+        printf("2.Have an ID Card that will be kept by the owner of CV Wisma Karya Motor during the rental period\n");
+        printf("3.There are provisions for a charge if the lease time limit is exceeded with the price of charge equal to the rental price of the vehicle\n");
+        printf("4.There are provisions for a charge if the vehicle being rented is damaged with a charge according to the cost of repairs\n");
+        printf("5.The distance to use the rental vehicle is limited to the province\n");
+        printf("6.Rental vehicles are not permitted for racing use\n");
+
+        getch();
+        system("cls");
+        dataDiri();
+
+}
+
 void dataDiri()
 {
     datadiri:
 
         printf("===============================\n");
-        printf("    Masukkan Data Diri Anda    \n");
+        printf("    INPUT YOUR PERSONAL DATA   \n");
         printf("===============================\n");
-        printf("Nama            : ");
+        printf("Name            : ");
         scanf("%s", &nama);
-        printf("Asal            : ");
+        printf("Country         : ");
         scanf("%s", &asal);
-        printf("Alamat          : ");
+        printf("Address         : ");
         scanf("%s", &alamat);
-        printf("Jenis Kelamin   : ");
+        printf("Gender          : ");
         scanf("%s", &jenisKelamin);
         printf("KTP/Passport    : ");
         scanf("%d", &id);
-        printf("No. HP          : ");
+        printf("Phone Number    : ");
         scanf("%d", &hp);
+        menuUtama();
+}
 
+void menuUtama()
+{
     pilihan:
 
         printf("Menu            :\n");
         printf("===============================\n");
-        printf("  01. Motor\n");
-        printf("  02. Mobil\n");
+        printf("| 01. Motorcycle              |\n");
+        printf("| 02. Car                     |\n");
         printf("===============================\n");
-        printf("Pilih Menu      : ");
+        printf("Choose Menu     : ");
         scanf("%d", &menu);
         printf("===============================\n");
         system("cls");
@@ -219,6 +245,7 @@ void dataDiri()
             goto pilihan;
         }
 
+}
 }
 
 void menuMotor()
