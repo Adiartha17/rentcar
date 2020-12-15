@@ -11,7 +11,7 @@ char name[30],pass[30];
 }w[99];
 int n;
 char nama[50],asal,alamat,jenisKelamin;
-int id,hp,menu;
+int id,hp,menu, pilihanmotor, pilihanmobil;
 
 void login();
 void reg();
