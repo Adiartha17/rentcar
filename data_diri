@@ -17,6 +17,7 @@ void login();
 void reg();
 void rules();
 void dataDiri();
+void menuUtama();
 void menuMotor();
 void menuMobil();
 void motorHonda();
