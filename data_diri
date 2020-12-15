@@ -22,6 +22,8 @@ void motorHonda();
 void motorYamaha();
 void motorKawasaki();
 void motorPrestige();
+void checkOut();
+void kwitansi();
 
 int main()
 {
