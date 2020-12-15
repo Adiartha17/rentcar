@@ -25,50 +25,41 @@ void motorPrestige();
 
 int main()
 {
-system("cls");
-printf("\n\n\n\n\t\t\t  ==============================================");
-printf("\n\t\t          |                 WELCOME!                   |");
-printf("\n\t\t          ----------------------------------------------");
-printf("\n\t\t          |          PRESS ENTER TO PROCEED            |");
-printf("\n\t\t          ----------------------------------------------");
-printf("\n\t\t                               |");
-printf("\n\t\t                               |");
-printf("\n\t\t                               |");
-printf("\n\t\t                               |");
-printf("\n\t\t                               |");
-printf("\n\t\t                               v");
-printf("\n\t\t      =======================================================");
-printf("\n\t\t      |                                                     |");
-printf("\n\t\t      |                      ENTER                          |");
-printf("\n\t\t      |                                                     |");
-printf("\n\t\t      =======================================================");
-if(getch()==13)
-  system("cls");
-XY:
-printf("\n\t\t      ==================================  ==================================");
-printf("\n\t\t      | 1.|  LOGIN                     |  | 2.|  SIGN UP                   |");
-printf("\n\t\t      ==================================  ==================================");
-printf("\n\t\t                      |                                     |");
-printf("\n\t\t                      |           ENTER YOUR CHOICE         |");
-printf("\n\t\t                      |_______________|     |_______________|");
-printf("\n\t\t                                         ");
-scanf("%d",&n);
-system("cls");
-switch(n)
-  {
+printf("\n                      ===============================================");
+    printf("\n                      |                  WELCOME                    |");
+    printf("\n                      |           CV. WISMA KARYA MOTOR             |");
+    printf("\n                      |              Enjoy Your Ride                |");
+    printf("\n                      |           VEHICLE RENTAL PROGRAM            |");
+    printf("\n                      -----------------------------------------------");
+    printf("\n                      |           PRESS ENTER TO PROCEED            |");
+    printf("\n                      -----------------------------------------------");
+    getch();
+
+    XY:
+    printf("\n          ==================================  ==================================");
+    printf("\n          | 1.|  LOGIN                     |  | 2.|  SIGN UP                   |");
+    printf("\n          ==================================  ==================================");
+    printf("\n                          |                                     |");
+    printf("\n                          |           ENTER YOUR CHOICE         |");
+    printf("\n                          |_____|     |_____|");
+    printf("\n                                              ");
+    scanf("%d",&n);
+    system("cls");
+    switch(n)
+    {
     case 1:
         login();
         break;
     case 2:
         reg();
         break;
-    default: printf("\n\n\t\t\t\tNO MATCH FOUND");
-        printf("\n\n\t\t\tPress Enter to re-Enter the choice");
+    default: printf("\n\n                             NO MATCH FOUND");
+        printf("\n\n                        Press Enter to re-Enter the choice");
         if(getch()==13)
         system("cls");
         goto XY;
-  }
-  return 0;
+    }
+    return 0;
 }
 void login()
 {
