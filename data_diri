@@ -93,7 +93,7 @@ void login()
             system("cls");
             printf("\n\n\n\t\t\t~~~YOU HAVE LOGGED IN SUCCESSFULLY!~~~");
             printf("\n\n\n\t\t\t                WELCOME!");
-            Rules();
+            rules();
            break;
           }
         else if(checku==0&&checkp!=0)
@@ -245,7 +245,6 @@ void menuUtama()
             goto pilihan;
         }
 
-}
 }
 
 void menuMotor()
