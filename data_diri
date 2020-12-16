@@ -423,35 +423,173 @@ void mobilToyota()
         printf("            LIST OF TOYOTA CARS              \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|1. Name Of Car :Avanza                     |\n");
+        printf("|1. Avanza                                  |\n", pilihanMobil);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2017              |\n");
         printf("|Color                  : Black             |\n");
         printf("|Odometer               : 3098 KM           |\n");
-        printf("|Last Date Of service   : 12/2/2020         |\n");
+        printf("|Last Date Of service   : 12/02/2020        |\n");
         printf("|Appropriateness        : 95/100            |\n");
         printf("|Rental Price           : Rp./Day           |\n");
         printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|2. Avanza_Velos                            |\n", pilihanMobil);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2020              |\n");
+        printf("|Color                  : White             |\n");
+        printf("|Odometer               : 2365 KM           |\n");
+        printf("|Last Date Of service   : 02/06/2020        |\n");
+        printf("|Appropriateness        : 97/100            |\n");
+        printf("|Rental Price           : Rp./Day           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|3. Kijang_Innova                           |\n", pilihanMobil);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2016              |\n");
+        printf("|Color                  : Silver             |\n");
+        printf("|Odometer               : 9345 KM           |\n");
+        printf("|Last Date Of service   : 25/02/2019        |\n");
+        printf("|Appropriateness        : 80/100            |\n");
+        printf("|Rental Price           : Rp./Day           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|4. Agya                                    |\n", pilihanMobil);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Color                  : White             |\n");
+        printf("|Odometer               : 2100 KM           |\n");
+        printf("|Last Date Of service   : 09/01/2020        |\n");
+        printf("|Appropriateness        : 95/100            |\n");
+        printf("|Rental Price           : Rp./Day           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|5. Fortuner                                |\n", pilihanMobil);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2018              |\n");
+        printf("|Color                  : Black             |\n");
+        printf("|Odometer               : 3544 KM           |\n");
+        printf("|Last Date Of service   : 17/02/2019        |\n");
+        printf("|Appropriateness        : 90/100            |\n");
+        printf("|Rental Price           : Rp./Day           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|6. Yaris                                   |\n", pilihanMobil);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Color                  : White             |\n");
+        printf("|Odometer               : 2241 KM           |\n");
+        printf("|Last Date Of service   : 05/11/2020         |\n");
+        printf("|Appropriateness        : 97/100            |\n");
+        printf("|Rental Price           : Rp./Day           |\n");
+        printf("|-------------------------------------------|\n");
+
         printf("Select your car : ");
-        scanf("%d", &pilihanmobil);
-        switch(pilihanmobil)
+        scanf("%d", &pilihanMobil);
+        switch(pilihanMobil)
         {
         case 1:
-            printf("Are You Sure to Rent This Car?\n");
-            printf("(y/n)");
-            scanf("%c", &decision);
+        printf("are you sure to rent this vehicle?\n");
+        printf("(y/n)\n");
+        scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Car '%c' ", pilihanmobil);
-                printf("Press Enter to Return to the Main Menu");
-                system("cls");
-                menuMobil();
-                break;
+                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Returning to Main Menu\n");
+                    system("cls");
+                    checkout();
                 }
-            break;
+                else if (decision=='n')
+                {
+                    goto mobilToyota;
+                }
+        break;
+        case 2:
+        printf("are you sure to rent this vehicle?\n");
+        printf("(y/n)\n");
+        scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Returning to Main Menu\n");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    goto mobilToyota;
+                }
+        break;
+        case 3:
+        printf("are you sure to rent this vehicle?\n");
+        printf("(y/n)\n");
+        scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Returning to Main Menu\n");
+                    system("cls");
+                    checkout();
+                    break;
+                }
+                else if (decision=='n')
+                {
+                    goto mobilToyota;
+                }
+        break;
+        case 4:
+        printf("are you sure to rent this vehicle?\n");
+        printf("(y/n)\n");
+        scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Returning to Main Menu\n");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    goto mobilToyota;
+                }
+        break;
+        case 5:
+        printf("are you sure to rent this vehicle?\n");
+        printf("(y/n)\n");
+        scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Returning to Main Menu\n");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    goto mobilToyota;
+                }
+        break;
+        case 6:
+        printf("are you sure to rent this vehicle?\n");
+        printf("(y/n)\n");
+        scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Returning to Main Menu\n");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    goto mobilToyota;
+                }
+        break;
         }
-
-
 }
 
 void mobilHonda()
