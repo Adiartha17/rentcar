@@ -11,8 +11,8 @@ char name[30],pass[30];
 }w[99];
 int n;
 char nama[50],asal,alamat,jenisKelamin;
-int id,hp,menu, pilihanmotor, pilihanmobil;
-int pmHonda, pmYamaha, pmKawasaki, pmPrestige; //Pilihan motor sesuai dengan merk
+int id,hp,menu, pilihanmotor, pilihanMobil;
+int pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu; //Pilihan motor & mobil sesuai dengan merk
 
 void login();
 void reg();
@@ -28,7 +28,7 @@ void motorPrestige();
 void mobilToyota();
 void mobilHonda();
 void mobilDaihatsu();
-void checkOut();
+void checkout();
 void kwitansi();
 
 int main()
@@ -41,9 +41,10 @@ printf("\n                          ============================================
     printf("\n                      -----------------------------------------------");
     printf("\n                      |           PRESS ENTER TO PROCEED            |");
     printf("\n                      -----------------------------------------------");
+    system ("cls");
     getch();
 
-    XY:
+    Login:
     printf("\n          ==================================  ==================================");
     printf("\n          | 1.|  LOGIN                     |  | 2.|  SIGN UP                   |");
     printf("\n          ==================================  ==================================");
@@ -65,7 +66,7 @@ printf("\n                          ============================================
         printf("\n\n                        Press Enter to re-Enter the choice");
         if(getch()==13)
         system("cls");
-        goto XY;
+        goto Login;
     }
     return 0;
 }
@@ -598,7 +599,7 @@ void mobilToyota()
         printf("            LIST OF TOYOTA CARS              \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|1. Avanza                                  |\n", pilihanMobil);
+        printf("|1. Avanza                                  |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2017              |\n");
         printf("|Color                  : Black             |\n");
@@ -609,7 +610,7 @@ void mobilToyota()
         printf("|-------------------------------------------|\n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|2. Avanza Veloz                            |\n", pilihanMobil);
+        printf("|2. Avanza Veloz                            |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
         printf("|Color                  : White             |\n");
@@ -620,7 +621,7 @@ void mobilToyota()
         printf("|-------------------------------------------|\n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|3. Kijang Innova                           |\n", pilihanMobil);
+        printf("|3. Kijang Innova                           |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2016              |\n");
         printf("|Color                  : Silver             |\n");
@@ -631,7 +632,7 @@ void mobilToyota()
         printf("|-------------------------------------------|\n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|4. Agya                                    |\n", pilihanMobil);
+        printf("|4. Agya                                    |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Color                  : White             |\n");
@@ -642,7 +643,7 @@ void mobilToyota()
         printf("|-------------------------------------------|\n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|5. Fortuner                                |\n", pilihanMobil);
+        printf("|5. Fortuner                                |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
         printf("|Color                  : Black             |\n");
@@ -653,19 +654,30 @@ void mobilToyota()
         printf("|-------------------------------------------|\n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|6. Yaris                                   |\n", pilihanMobil);
+        printf("|6. Yaris                                   |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Color                  : White             |\n");
         printf("|Odometer               : 2241 KM           |\n");
-        printf("|Last Date Of service   : 05/11/2020         |\n");
+        printf("|Last Date Of service   : 05/11/2020        |\n");
         printf("|Appropriateness        : 97/100            |\n");
+        printf("|Rental Price           : Rp./Day           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("============================================|\n");
+        printf("|-------------------------------------------|\n");
+        printf("|6. Toyota Rush                             |\n", PMToyota);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Color                  : Black             |\n");
+        printf("|Odometer               : 2508 KM           |\n");
+        printf("|Last Date Of service   : 05/05/2020        |\n");
+        printf("|Appropriateness        : 98/100            |\n");
         printf("|Rental Price           : Rp./Day           |\n");
         printf("|-------------------------------------------|\n");
 
         printf("Select your car : ");
-        scanf("%d", &pilihanMobil);
-        switch(pilihanMobil)
+        scanf("%d", &PMToyota);
+        switch(PMToyota)
         {
         case 1:
         printf("are you sure to rent this vehicle?\n");
@@ -673,7 +685,7 @@ void mobilToyota()
         scanf("%s", &decision);
                 if (decision=='y')
                 {
-                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Proceeding Your Vehicle '%d'\n", PMToyota);
                     printf("Returning to Main Menu\n");
                     system("cls");
                     checkout();
@@ -689,7 +701,7 @@ void mobilToyota()
         scanf("%s", &decision);
                 if (decision=='y')
                 {
-                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Proceeding Your Vehicle '%d'\n", PMToyota);
                     printf("Returning to Main Menu\n");
                     system("cls");
                     checkout();
@@ -705,7 +717,7 @@ void mobilToyota()
         scanf("%s", &decision);
                 if (decision=='y')
                 {
-                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Proceeding Your Vehicle '%d'\n", PMToyota);
                     printf("Returning to Main Menu\n");
                     system("cls");
                     checkout();
@@ -722,7 +734,7 @@ void mobilToyota()
         scanf("%s", &decision);
                 if (decision=='y')
                 {
-                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Proceeding Your Vehicle '%d'\n", PMToyota);
                     printf("Returning to Main Menu\n");
                     system("cls");
                     checkout();
@@ -738,7 +750,7 @@ void mobilToyota()
         scanf("%s", &decision);
                 if (decision=='y')
                 {
-                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Proceeding Your Vehicle '%d'\n", PMToyota);
                     printf("Returning to Main Menu\n");
                     system("cls");
                     checkout();
@@ -754,7 +766,23 @@ void mobilToyota()
         scanf("%s", &decision);
                 if (decision=='y')
                 {
-                    printf("Proceeding Your Vehicle '%d'\n", pilihanMobil);
+                    printf("Proceeding Your Vehicle '%d'\n", PMToyota);
+                    printf("Returning to Main Menu\n");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    goto mobilToyota;
+                }
+        break;
+        case 7:
+        printf("are you sure to rent this vehicle?\n");
+        printf("(y/n)\n");
+        scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d'\n", PMToyota);
                     printf("Returning to Main Menu\n");
                     system("cls");
                     checkout();
@@ -776,7 +804,7 @@ void mobilHonda()
         printf("            LIST OF HONDA CARS               \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|1. Name of car :Jazz                       |\n");
+        printf("|1. Jazz                                    |\n", PMHonda);
         printf("|-------------------------------------------|\n");
         printf("|Year                   :2016               |\n");
         printf("|Color                  :HITAM              |\n");
@@ -785,26 +813,191 @@ void mobilHonda()
         printf("|Appropriateness        :80/100             |\n");
         printf("|Rental Price           :Rp./Day            |\n");
         printf("|-------------------------------------------|\n");
-        printf("Select your car : ");
-        scanf("%d", &pilihanmobil);
-        switch(pilihanmobil)
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|2. Brio                                    |\n", PMHonda);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2016               |\n");
+        printf("|Color                  :HITAM              |\n");
+        printf("|Odometer               :4078 KM            |\n");
+        printf("|Last Date Of Service   :12/06/2020         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|3. CR-V                                    |\n", PMHonda);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2016               |\n");
+        printf("|Color                  :HITAM              |\n");
+        printf("|Odometer               :4078 KM            |\n");
+        printf("|Last Date Of Service   :12/06/2020         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|4. HR-V                                    |\n", PMHonda);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2016               |\n");
+        printf("|Color                  :HITAM              |\n");
+        printf("|Odometer               :4078 KM            |\n");
+        printf("|Last Date Of Service   :12/06/2020         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|5. Honda Civic                             |\n", PMHonda);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2016               |\n");
+        printf("|Color                  :HITAM              |\n");
+        printf("|Odometer               :4078 KM            |\n");
+        printf("|Last Date Of Service   :12/06/2020         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|6. Honda Mobilio                           |\n", PMHonda);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2016               |\n");
+        printf("|Color                  :HITAM              |\n");
+        printf("|Odometer               :4078 KM            |\n");
+        printf("|Last Date Of Service   :12/06/2020         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|7. BR-V                                    |\n", PMHonda);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2016               |\n");
+        printf("|Color                  :HITAM              |\n");
+        printf("|Odometer               :4078 KM            |\n");
+        printf("|Last Date Of Service   :12/06/2020         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        
+        printf("Select your Car : ");
+        scanf("%d", &PMHonda);
+        switch(PMHonda)
         {
         case 1:
-            printf("Are You Sure to Rent This Car?\n");
+            printf("Are You Sure to Rent This Vehicle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Car '%c' ", pilihanmobil);
-                printf("Press Enter to Return to the Main Menu");
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Returning to Main Menu\n");
                 system("cls");
-                menuMobil();
-                break;
+                checkout();
                 }
-            break;
+                else if (decision=='n')
+                {
+                     goto mobilHonda;
+                }
+        break;
+        case 2:
+            printf("Are You Sure to Rent This Vehicle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                else if (decision=='n')
+                {
+                     goto mobilHonda;
+                }
+        break;
+        case 3:
+            printf("Are You Sure to Rent This Vehicle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                else if (decision=='n')
+                {
+                     goto mobilHonda;
+                }
+        break;
+        case 4:
+            printf("Are You Sure to Rent This Vehicle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                else if (decision=='n')
+                {
+                     goto mobilHonda;
+                }
+        break;
+        case 5:
+            printf("Are You Sure to Rent This Vehicle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                else if (decision=='n')
+                {
+                     goto mobilHonda;
+                }
+        break;
+        case 6:
+            printf("Are You Sure to Rent This Vehicle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                else if (decision=='n')
+                {
+                     goto mobilHonda;
+                }
+        break;
+        case 7:
+            printf("Are You Sure to Rent This Vehicle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                else if (decision=='n')
+                {
+                     goto mobilHonda;
+                }
+        break;
         }
-
-
+        
 }
 void mobilDaihatsu()
 {
