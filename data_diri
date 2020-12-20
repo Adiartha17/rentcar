@@ -41,8 +41,8 @@ printf("\n                          ============================================
     printf("\n                      -----------------------------------------------");
     printf("\n                      |           PRESS ENTER TO PROCEED            |");
     printf("\n                      -----------------------------------------------");
-    system ("cls");
     getch();
+    system ("cls");
 
     Login:
     printf("\n          ==================================  ==================================");
@@ -291,7 +291,7 @@ void motorHonda()
     motorhonda:
 
         printf("=============================================\n");
-        printf("            HONDA MOTORCYCLES LIST           \n");
+        printf("          LIST OF HONDA MOTORCYCLES          \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
         printf("|1. Honda Scoopy                            |\n");
@@ -366,7 +366,7 @@ void motorHonda()
         case 1:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmHonda);
@@ -385,7 +385,7 @@ void motorHonda()
         case 2:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmHonda);
@@ -404,7 +404,7 @@ void motorHonda()
         case 3:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmHonda);
@@ -423,7 +423,7 @@ void motorHonda()
         case 4:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmHonda);
@@ -442,7 +442,7 @@ void motorHonda()
         case 5:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmHonda);
@@ -461,7 +461,7 @@ void motorHonda()
         case 6:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmHonda);
@@ -480,7 +480,7 @@ void motorHonda()
         case 7:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmHonda);
@@ -501,22 +501,31 @@ void motorHonda()
 
 void motorYamaha()
 {
+    char decision;
     motoryamaha:
 
         printf("=============================================\n");
-        printf("            DAFTAR MOTOR YAMAHA              \n");
+        printf("         LIST OFT YAMAHA MOTORCYCLES         \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|Nama Motor :                               |\n");
+        printf("|1. Yamaha Nmax 155                         |\n");
         printf("|-------------------------------------------|\n");
-        printf("|Tahun                  :                   |\n");
-        printf("|Warna                  :                   |\n");
-        printf("|Odometer               :                   |\n");
-        printf("|Tgl Service Terakhir   :                   |\n");
-        printf("|Kelayakan              :                   |\n");
-        printf("|Harga Sewa             :                   |\n");
+        printf("|Year                   : 2018              |\n");
+        printf("|Odometer               : 20198 KM          |\n");
+        printf("|Topspeed               : 150cc             |\n");
+        printf("|Last Service           : 26/11/2020         |\n");
+        printf("|Advisability           : 92/100            |\n");
+        printf("|Rent Price             : Rp.80.000/day     |\n");
         printf("|-------------------------------------------|\n");
-
+        printf("|2. Yamaha Lexi                             |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2018              |\n");
+        printf("|Odometer               : 24329 KM          |\n");
+        printf("|Topspeed               : 150cc             |\n");
+        printf("|Last Service           : 12/1/2020         |\n");
+        printf("|Advisability           : 94/100            |\n");
+        printf("|Rent Price             : Rp.80.000/day     |\n");
+        printf("|-------------------------------------------|\n");
 }
 
 void motorKawasaki()
