@@ -513,7 +513,7 @@ void motorYamaha()
         printf("|Year                   : 2018              |\n");
         printf("|Odometer               : 20198 KM          |\n");
         printf("|Topspeed               : 150cc             |\n");
-        printf("|Last Service           : 26/11/2020         |\n");
+        printf("|Last Service           : 26/11/2020        |\n");
         printf("|Advisability           : 92/100            |\n");
         printf("|Rent Price             : Rp.80.000/day     |\n");
         printf("|-------------------------------------------|\n");
@@ -761,7 +761,7 @@ void mobilToyota()
         printf("|3. Kijang Innova                           |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2016              |\n");
-        printf("|Color                  : Silver             |\n");
+        printf("|Color                  : Silver            |\n");
         printf("|Odometer               : 9345 KM           |\n");
         printf("|Last Date Of service   : 25/02/2019        |\n");
         printf("|Appropriateness        : 80/100            |\n");
@@ -1145,35 +1145,39 @@ void mobilDaihatsu()
         printf("            LIST OF DAIHATSU CARS            \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|1. Name of car :                       |\n");
+        printf("|1. Terios                                  |\n", PMDaihatsu);
         printf("|-------------------------------------------|\n");
-        printf("|Year                   :2019               |\n");
+        printf("|Year                   :2018               |\n");
         printf("|Color                  :White              |\n");
-        printf("|Odometer               :4078 KM            |\n");
-        printf("|Last Date Of Service   :06/06/2020         |\n");
+        printf("|Odometer               :3987 KM            |\n");
+        printf("|Last Date Of Service   :30/11/2019         |\n");
         printf("|Appropriateness        :85/100             |\n");
         printf("|Rental Price           :Rp./Day            |\n");
         printf("|-------------------------------------------|\n");
+        
+        
         printf("Select your car : ");
-        scanf("%d", &pilihanmobil);
-        switch(pilihanmobil)
+        scanf("%d", &PMDaihatsu);
+        switch(PMDaihatsu)
         {
         case 1:
             printf("Are You Sure to Rent This Car?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Car '%c' ", pilihanmobil);
-                printf("Press Enter to Return to the Main Menu");
+                printf("Proceeding Your Vehicle '%d'\n ", PMDaihatsu);
+                printf("Returning to Main Menu\n");
                 system("cls");
-                menuMobil();
-                break;
+                checkout();
                 }
-            break;
+                    else if (decision=='n')
+                {
+                    goto mobilDaihatsu;
+                }
+        break;
         }
-
-
+        
 }
 
 
