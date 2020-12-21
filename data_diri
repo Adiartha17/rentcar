@@ -297,6 +297,7 @@ void motorHonda()
         printf("|1. Honda Scoopy                            |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2017              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 3098 KM           |\n");
         printf("|Topspeed               : 110cc             |\n");
         printf("|Last Service           : 12/2/2020         |\n");
@@ -306,6 +307,7 @@ void motorHonda()
         printf("|2. Honda Vario 150                         |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 12561 KM          |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 21/5/2020         |\n");
@@ -315,6 +317,7 @@ void motorHonda()
         printf("|3. Honda PCX 150                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 9821 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 7/3/2020          |\n");
@@ -324,6 +327,7 @@ void motorHonda()
         printf("|4. Honda ADV 150                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 6877 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 9/6/2020          |\n");
@@ -333,6 +337,7 @@ void motorHonda()
         printf("|5. CBR 150R                                |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
+        printf("|Type                   : Sport Bike        |\n");
         printf("|Odometer               : 5188 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 21/5/2020         |\n");
@@ -342,6 +347,7 @@ void motorHonda()
         printf("|6. Honda Beat                              |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 7719 KM           |\n");
         printf("|Topspeed               : 110cc             |\n");
         printf("|Last Service           : 11/4/2020         |\n");
@@ -351,6 +357,7 @@ void motorHonda()
         printf("|7. Honda Vario 110                         |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 6239 KM           |\n");
         printf("|Topspeed               : 110cc             |\n");
         printf("|Last Price             : 13/7/2020         |\n");
@@ -510,7 +517,8 @@ void motorYamaha()
         printf("|-------------------------------------------|\n");
         printf("|1. Yamaha Nmax 155                         |\n");
         printf("|-------------------------------------------|\n");
-        printf("|Year                   : 2018              |\n");
+        printf("|Year                   : 2018              |\n")
+        printf("|Type                   : Scooter           |\n");;
         printf("|Odometer               : 20198 KM          |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 26/11/2020        |\n");
@@ -520,6 +528,7 @@ void motorYamaha()
         printf("|2. Yamaha Lexi                             |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 24329 KM          |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 12/1/2020         |\n");
@@ -529,6 +538,7 @@ void motorYamaha()
         printf("|3. Yamaha Aerox                            |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 8325 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 17/8/2020         |\n");
@@ -538,6 +548,7 @@ void motorYamaha()
         printf("|4. Yamaha XSR 155                          |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
+        printf("|Type                   : Naked Bike        |\n");
         printf("|Odometer               : 3289 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 9/6/2020          |\n");
@@ -547,6 +558,7 @@ void motorYamaha()
         printf("|5. Yamaha R15 V3                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
+        printf("|Type                   : Sport Bike        |\n");
         printf("|Odometer               : 1288 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : N/A               |\n");
@@ -673,6 +685,7 @@ void motorKawasaki()
         printf("|1. Kawasaki KLX 150BF                      |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Tracker           |\n");
         printf("|Odometer               : 11349 KM          |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 9/10/2020         |\n");
@@ -683,26 +696,27 @@ void motorKawasaki()
         printf("|2. Kawasaki KLX 250                        |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Tracker           |\n");
         printf("|Odometer               : 7899 KM           |\n");
         printf("|Topspeed               : 250cc             |\n");
         printf("|Last Service           : 26/11/2020        |\n");
         printf("|Advisability           : 95/100            |\n");
         printf("|Rent Price             : Rp.160.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|-------------------------------------------|\n");
         printf("|3. Kawasaki Ninja 250                      |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Sport Bike        |\n");
         printf("|Odometer               : 5008 KM           |\n");
         printf("|Topspeed               : 250cc             |\n");
         printf("|Last Service           : 10/12/2020        |\n");
         printf("|Advisability           : 98/100            |\n");
         printf("|Rent Price             : Rp.250.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|-------------------------------------------|\n");
         printf("|4. Kawasaki W175                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
+        printf("|Type                   : Cruiser           |\n");
         printf("|Odometer               : 12079 KM          |\n");
         printf("|Topspeed               : 175cc             |\n");
         printf("|Last Service           : 11/9/2020         |\n");
@@ -712,6 +726,7 @@ void motorKawasaki()
         printf("|5. Kawasaki W250                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Cruiser           |\n");
         printf("|Odometer               : 10233 KM          |\n");
         printf("|Topspeed               : 250cc             |\n");
         printf("|Last Service           : 30/11/2020        |\n");
