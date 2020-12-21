@@ -658,20 +658,65 @@ void motorYamaha()
 
 void motorKawasaki()
 {
+    char decision;
+    motorkawasaki:
+
+        void motorKawasaki()
+{
+    char decision;
     motorkawasaki:
 
         printf("=============================================\n");
-        printf("            DAFTAR MOTOR KAWASAKI            \n");
+        printf("         LIST OF KAWASAKI MOTORCYCLES        \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|Nama Motor :                               |\n");
+        printf("|1. Kawasaki KLX 150BF                      |\n");
         printf("|-------------------------------------------|\n");
-        printf("|Tahun                  :                   |\n");
-        printf("|Warna                  :                   |\n");
-        printf("|Odometer               :                   |\n");
-        printf("|Tgl Service Terakhir   :                   |\n");
-        printf("|Kelayakan              :                   |\n");
-        printf("|Harga Sewa             :                   |\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 11349 KM          |\n");
+        printf("|Topspeed               : 150cc             |\n");
+        printf("|Last Service           : 9/10/2020         |\n");
+        printf("|Advisability           : 91/100            |\n");
+        printf("|Rent Price             : Rp.100.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|-------------------------------------------|\n");
+        printf("|2. Kawasaki KLX 250                        |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 7899 KM           |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Service           : 26/11/2020        |\n");
+        printf("|Advisability           : 95/100            |\n");
+        printf("|Rent Price             : Rp.160.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|-------------------------------------------|\n");
+        printf("|3. Kawasaki Ninja 250                      |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 5008 KM           |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Service           : 10/12/2020        |\n");
+        printf("|Advisability           : 98/100            |\n");
+        printf("|Rent Price             : Rp.250.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|-------------------------------------------|\n");
+        printf("|4. Kawasaki W175                           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2018              |\n");
+        printf("|Odometer               : 12079 KM          |\n");
+        printf("|Topspeed               : 175cc             |\n");
+        printf("|Last Service           : 11/9/2020         |\n");
+        printf("|Advisability           : 92/100            |\n");
+        printf("|Rent Price             : Rp.140.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|5. Kawasaki W250                           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 10233 KM          |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Service           : 30/11/2020        |\n");
+        printf("|Advisability           : 93/100            |\n");
+        printf("|Rent Price             : Rp.220.000/day    |\n");
         printf("|-------------------------------------------|\n");
 }
 
@@ -1027,7 +1072,7 @@ void mobilHonda()
             scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda);
                 printf("Returning to Main Menu\n");
                 system("cls");
                 checkout();
@@ -1043,7 +1088,7 @@ void mobilHonda()
             scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda);
                 printf("Returning to Main Menu\n");
                 system("cls");
                 checkout();
@@ -1059,7 +1104,7 @@ void mobilHonda()
             scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda);
                 printf("Returning to Main Menu\n");
                 system("cls");
                 checkout();
@@ -1075,7 +1120,7 @@ void mobilHonda()
             scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda);
                 printf("Returning to Main Menu\n");
                 system("cls");
                 checkout();
@@ -1091,7 +1136,7 @@ void mobilHonda()
             scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda);
                 printf("Returning to Main Menu\n");
                 system("cls");
                 checkout();
@@ -1107,7 +1152,7 @@ void mobilHonda()
             scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda);
                 printf("Returning to Main Menu\n");
                 system("cls");
                 checkout();
@@ -1123,7 +1168,7 @@ void mobilHonda()
             scanf("%s", &decision);
                 if (decision=='y')
                 {
-                printf("Proceeding Your Vehicle '%d'\n ", PMHonda;
+                printf("Proceeding Your Vehicle '%d'\n ", PMHonda);
                 printf("Returning to Main Menu\n");
                 system("cls");
                 checkout();
