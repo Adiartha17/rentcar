@@ -288,6 +288,7 @@ void menuMotor()
 
 void motorHonda()
 {
+    char decision;
     motorhonda:
 
         printf("=============================================\n");
@@ -364,8 +365,16 @@ void motorHonda()
         printf("|Advisability           : 90/100            |\n");
         printf("|Rent Price             : Rp. 50.000/day    |\n");
         printf("|-------------------------------------------|\n");
-
-
+        printf("|8. CBR 250 RR                              |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Sport Bike        |\n");
+        printf("|Odometer               : 6119 KM           |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Price             : 18/6/2020         |\n");
+        printf("|Advisability           : 94/100            |\n");
+        printf("|Rent Price             : Rp. 250.000/day   |\n");
+        printf("|-------------------------------------------|\n");
         printf("Select your vehicle : ");
         scanf("%d", &pmHonda);
         switch(pmHonda)
@@ -503,6 +512,31 @@ void motorHonda()
                     goto motorhonda;
                 }
             break;
+        case 8:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmHonda);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorhonda;
+                }
+            break;
+        default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Vehicle");
+            getch();
+            system("cls");
+            goto motorhonda;
         }
 }
 
@@ -517,8 +551,7 @@ void motorYamaha()
         printf("|-------------------------------------------|\n");
         printf("|1. Yamaha Nmax 155                         |\n");
         printf("|-------------------------------------------|\n");
-        printf("|Year                   : 2018              |\n")
-        printf("|Type                   : Scooter           |\n");;
+        printf("|Year                   : 2018              |\n");
         printf("|Odometer               : 20198 KM          |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 26/11/2020        |\n");
@@ -528,7 +561,6 @@ void motorYamaha()
         printf("|2. Yamaha Lexi                             |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
-        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 24329 KM          |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 12/1/2020         |\n");
@@ -538,7 +570,6 @@ void motorYamaha()
         printf("|3. Yamaha Aerox                            |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
-        printf("|Type                   : Scooter           |\n");
         printf("|Odometer               : 8325 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 17/8/2020         |\n");
@@ -548,7 +579,6 @@ void motorYamaha()
         printf("|4. Yamaha XSR 155                          |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
-        printf("|Type                   : Naked Bike        |\n");
         printf("|Odometer               : 3289 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : 9/6/2020          |\n");
@@ -558,17 +588,25 @@ void motorYamaha()
         printf("|5. Yamaha R15 V3                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
-        printf("|Type                   : Sport Bike        |\n");
         printf("|Odometer               : 1288 KM           |\n");
         printf("|Topspeed               : 150cc             |\n");
         printf("|Last Service           : N/A               |\n");
         printf("|Advisability           : 99/100            |\n");
         printf("|Rent Price             : Rp. 180.000/day   |\n");
         printf("|-------------------------------------------|\n");
+        printf("|5. Yamaha R25                              |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 8223 KM           |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Service           : 12/4/2020         |\n");
+        printf("|Advisability           : 92/100            |\n");
+        printf("|Rent Price             : Rp. 250.000/day   |\n");
+        printf("|-------------------------------------------|\n");
 
         printf("Select your vehicle : ");
-        scanf("%d", &pmHonda);
-        switch(pmHonda)
+        scanf("%d", &pmYamaha);
+        switch(pmYamaha)
         {
         case 1:
             printf("Are You Sure to Rent This Motorcycle?\n");
@@ -665,6 +703,31 @@ void motorYamaha()
                     goto motoryamaha;
                 }
             break;
+        case 6:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmYamaha);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motoryamaha;
+                }
+            break;
+        default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Vehicle");
+            getch();
+            system("cls");
+            goto motoryamaha;
         }
 }
 
@@ -836,23 +899,352 @@ void motorKawasaki()
         }
 }
 
-void motorPrestige()
+void motorKawasaki()
 {
-    motorPrestige:
+    char decision;
+    motorkawasaki:
 
         printf("=============================================\n");
-        printf("            DAFTAR MOTOR PRESTIGE            \n");
+        printf("         LIST OF KAWASAKI MOTORCYCLES        \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|Nama Motor :                               |\n");
+        printf("|1. Kawasaki KLX 150BF                      |\n");
         printf("|-------------------------------------------|\n");
-        printf("|Tahun                  :                   |\n");
-        printf("|Warna                  :                   |\n");
-        printf("|Odometer               :                   |\n");
-        printf("|Tgl Service Terakhir   :                   |\n");
-        printf("|Kelayakan              :                   |\n");
-        printf("|Harga Sewa             :                   |\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 11349 KM          |\n");
+        printf("|Topspeed               : 150cc             |\n");
+        printf("|Last Service           : 9/10/2020         |\n");
+        printf("|Advisability           : 91/100            |\n");
+        printf("|Rent Price             : Rp.100.000/day    |\n");
         printf("|-------------------------------------------|\n");
+        printf("|-------------------------------------------|\n");
+        printf("|2. Kawasaki KLX 250                        |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 7899 KM           |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Service           : 26/11/2020        |\n");
+        printf("|Advisability           : 95/100            |\n");
+        printf("|Rent Price             : Rp.160.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|-------------------------------------------|\n");
+        printf("|3. Kawasaki Ninja 250                      |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 5008 KM           |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Service           : 10/12/2020        |\n");
+        printf("|Advisability           : 98/100            |\n");
+        printf("|Rent Price             : Rp.250.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|-------------------------------------------|\n");
+        printf("|4. Kawasaki W175                           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2018              |\n");
+        printf("|Odometer               : 12079 KM          |\n");
+        printf("|Topspeed               : 175cc             |\n");
+        printf("|Last Service           : 11/9/2020         |\n");
+        printf("|Advisability           : 92/100            |\n");
+        printf("|Rent Price             : Rp.140.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|5. Kawasaki W250                           |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Odometer               : 10233 KM          |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Last Service           : 30/11/2020        |\n");
+        printf("|Advisability           : 93/100            |\n");
+        printf("|Rent Price             : Rp.220.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+        printf("Select your vehicle : ");
+        scanf("%d", &pmKawasaki);
+        switch(pmKawasaki)
+        {
+        case 1:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 2:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 3:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 4:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 5:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Vehicle");
+            getch();
+            system("cls");
+            goto motorkawasaki;
+        }
+}
+
+void motorPrestige()
+{
+    char decision;
+    motorprestige:
+
+        printf("=============================================\n");
+        printf("        LIST OF PRESTIGE MOTORCYCLES         \n");
+        printf("=============================================\n");
+        printf("|1. Harley Davidson Fat Boy                 |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2018              |\n");
+        printf("|Type                   : Cruiser           |\n");
+        printf("|Topspeed               : 1868cc            |\n");
+        printf("|Advisability           : 95/100            |\n");
+        printf("|Rent Price             : Rp. 1.000.000/day |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|2. Yamaha R6                               |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Sport Bike        |\n");
+        printf("|Topspeed               : 600cc             |\n");
+        printf("|Advisability           : 96/100            |\n");
+        printf("|Rent Price             : Rp. 800.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|3. Kawasaki ZX-25R                         |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2020              |\n");
+        printf("|Type                   : Sport Bike        |\n");
+        printf("|Topspeed               : 250cc             |\n");
+        printf("|Advisability           : 98/100            |\n");
+        printf("|Rent Price             : Rp. 450.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|4. Kawasaki ZX-6R                          |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Sport Bike        |\n");
+        printf("|Topspeed               : 636cc             |\n");
+        printf("|Advisability           : 98/100            |\n");
+        printf("|Rent Price             : Rp. 820.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|5. Honda CBR 600RR                         |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2019              |\n");
+        printf("|Type                   : Sport Bike        |\n");
+        printf("|Topspeed               : 600cc             |\n");
+        printf("|Advisability           : 96/100            |\n");
+        printf("|Rent Price             : Rp. 800.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|6. Ducati Monster 696                      |\n");
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   : 2017              |\n");
+        printf("|Type                   : Naked Bike        |\n");
+        printf("|Topspeed               : 600cc             |\n");
+        printf("|Advisability           : 92/100            |\n");
+        printf("|Rent Price             : Rp. 760.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+        printf("Select your vehicle : ");
+        scanf("%d", &pmPrestige);
+        switch(pmPrestige)
+        {
+        case 1:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmPrestige);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorprestige;
+                }
+            break;
+        case 2:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmPrestige);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorprestige;
+                }
+            break;
+        case 3:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmPrestige);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorprestige;
+                }
+            break;
+        case 4:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmPrestige);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorprestige;
+                }
+            break;
+        case 5:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmPrestige);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorprestige;
+                }
+            break;
+        case 6:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmPrestige);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorprestige;
+                }
+            break;
+        default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Vehicle");
+            getch();
+            system("cls");
+            goto motorprestige;
+        }
 }
 
 void menuMobil()
