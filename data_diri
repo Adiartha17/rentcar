@@ -1707,6 +1707,72 @@ void mobilDaihatsu()
         printf("|Appropriateness        :85/100             |\n");
         printf("|Rental Price           :Rp./Day            |\n");
         printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|2. Ayla                                    |\n", PMDaihatsu);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2019               |\n");
+        printf("|Color                  :White              |\n");
+        printf("|Odometer               :2564 KM            |\n");
+        printf("|Last Date Of Service   :09/01/2020         |\n");
+        printf("|Appropriateness        :90/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|3. Gran Max MB                             |\n", PMDaihatsu);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2018               |\n");
+        printf("|Color                  :Black              |\n");
+        printf("|Odometer               :3778 KM            |\n");
+        printf("|Last Date Of Service   :25/05/2019         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|4. Luxio                                   |\n", PMDaihatsu);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2017               |\n");
+        printf("|Color                  :White              |\n");
+        printf("|Odometer               :3997 KM            |\n");
+        printf("|Last Date Of Service   :29/10/2019         |\n");
+        printf("|Appropriateness        :75/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|5. Sirion                                  |\n", PMDaihatsu);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2017               |\n");
+        printf("|Color                  :White              |\n");
+        printf("|Odometer               :3966 KM            |\n");
+        printf("|Last Date Of Service   :30/06/2019         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|6. Gran Max Pick-Up                        |\n", PMDaihatsu);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2018               |\n");
+        printf("|Color                  :Black              |\n");
+        printf("|Odometer               :3543 KM            |\n");
+        printf("|Last Date Of Service   :21/07/2019         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|7. Xenia                                   |\n", PMDaihatsu);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2017               |\n");
+        printf("|Color                  :Black              |\n");
+        printf("|Odometer               :3985 KM            |\n");
+        printf("|Last Date Of Service   :14/03/2019         |\n");
+        printf("|Appropriateness        :80/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
         
         
         printf("Select your car : ");
@@ -1714,6 +1780,38 @@ void mobilDaihatsu()
         switch(PMDaihatsu)
         {
         case 1:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMDaihatsu);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilDaihatsu;
+                }
+        break;
+        case 2:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMDaihatsu);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilDaihatsu;
+                }
+        break;
+        case 3:
             printf("Are You Sure to Rent This Car?\n");
             printf("(y/n)");
             scanf("%s", &decision);
