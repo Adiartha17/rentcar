@@ -718,6 +718,107 @@ void motorKawasaki()
         printf("|Advisability           : 93/100            |\n");
         printf("|Rent Price             : Rp.220.000/day    |\n");
         printf("|-------------------------------------------|\n");
+        
+        printf("Select your vehicle : ");
+        scanf("%d", &pmKawasaki);
+        switch(pmKawasaki)
+        {
+        case 1:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 2:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 3:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 4:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        case 5:
+            printf("Are You Sure to Rent This Motorcycle?\n");
+            printf("(y/n)");
+            scanf("%c", &decision);
+                if (decision=='y')
+                {
+                    printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
+                    printf("Press Enter to Return to the Main Menu");
+                    system("cls");
+                    checkout();
+                }
+                else if (decision=='n')
+                {
+                    printf("Press Enter to Return to Motorcycles Menu");
+                    getch();
+                    system("cls");
+                    goto motorkawasaki;
+                }
+            break;
+        }
 }
 
 void motorPrestige()
