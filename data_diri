@@ -4,18 +4,13 @@
 #include <time.h>
 #include <conio.h>
 
-static int i=0;
-struct web
-{
 char name[30],pass[30];
-}w[99];
 int n;
 char nama[50],asal,alamat,jenisKelamin;
 int id,hp,menu, pilihanmotor, pilihanMobil;
-int pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu; //Pilihan motor & mobil sesuai dengan merk
+int pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi; //Pilihan motor & mobil sesuai dengan merk
 
 void login();
-void reg();
 void rules();
 void dataDiri();
 void menuUtama();
@@ -28,6 +23,7 @@ void motorPrestige();
 void mobilToyota();
 void mobilHonda();
 void mobilDaihatsu();
+void mobilMitsubishi();
 void checkout();
 void kwitansi();
 
@@ -45,13 +41,13 @@ printf("\n                          ============================================
     system ("cls");
 
     Login:
-    printf("\n          ==================================  ==================================");
-    printf("\n          | 1.|  LOGIN                     |  | 2.|  SIGN UP                   |");
-    printf("\n          ==================================  ==================================");
-    printf("\n                          |                                     |");
-    printf("\n                          |           ENTER YOUR CHOICE         |");
-    printf("\n                          |_____|                         |_____|");
-    printf("\n                                              ");
+    printf("\n                            ==================================");
+    printf("\n                            | 1.|         LOGIN              |");
+    printf("\n                            ==================================");
+    printf("\n                            |                                |");
+    printf("\n                            |        ENTER YOUR CHOICE       |");
+    printf("\n                            |_____|                    |_____|");
+    printf("\n                                             ");
     scanf("%d",&n);
     system("cls");
     switch(n)
@@ -59,12 +55,8 @@ printf("\n                          ============================================
     case 1:
         login();
         break;
-    case 2:
-        reg();
-        break;
     default: printf("\n\n                             NO MATCH FOUND");
         printf("\n\n                        Press Enter to re-Enter the choice");
-        if(getch()==13)
         system("cls");
         goto Login;
     }
@@ -72,115 +64,45 @@ printf("\n                          ============================================
 }
 void login()
 {
-      FILE *fp;
       char c,name[30],pass[30]; int z=0;
-      int checku,checkp;
-      fp=fopen("Web_reg.txt","rb");
-      printf("\n\n\t\t\t\t      LOG IN");
-      printf("\n\t\t\t\t------------------------");
-      for(i=0;i<1000;i++)
-      {
-        printf("\n\n\t\t\t\t  ENTER USERNAME: ");
-        scanf("%s",name);
-        printf("\n\n\t\t\t\t  ENTER PASSWORD: ");
-        while((c=getch())!=13)
+{
+      printf("\n\n\t\t\t========================");
+      printf("\n\n\t\t\t\t       LOGIN");
+      printf("\n\t\t\t\t========================");
+      printf("\n\n\t\t\tUSERNAME: ");
+      scanf("%s",name);
+      printf("\n\n\t\t\tPASSWORD: ");
+      while((c=getch())!=13)
         {
           pass[z++]=c;
           printf("%c",'*');
         }
         pass[z]='\0';
-      while(!feof(fp))
-        {
-        fread(&w[i],sizeof(w[i]),1,fp);
-          checku=strcmp(name,w[i].name);
-          checkp=strcmp(pass,w[i].pass);
-          if(checku==0&&checkp==0)
-          {
-            system("cls");
-            printf("\n\n\n\t\t\t~~~YOU HAVE LOGGED IN SUCCESSFULLY!~~~");
-            printf("\n\n\n\t\t\t                WELCOME!");
-            rules();
-           break;
-          }
-        else if(checku==0&&checkp!=0)
-          {
-            printf("\n\n\n\t\t\tWRONG PASSWORD!! Not %s??",name);
-            printf("\n\n\t\t\t\t  (Press 'Y' to re-login)");
-            if(getch()=='y'||getch()=='Y')
-              login();
-          }
-        else if(checku!=0)
-          {
-            printf("\n\n\n\t\t\tYOU ARE NOT A REGISTERED USER!");
-            printf("\n\n\n\t\t\tPRESS ENTER TO SIGN UP");
-            printf("\n\n\n\t\t\t----------------------");
-            if(getch()==13)
-            system("cls");
-            reg();
-          }
-        }
-        break;
-      }
-      getch();
-    }
-  void reg()
-  {
-    FILE *fp;
-    char c,checker[30]; int z=0;
-    fp=fopen("Web_reg.txt","ab+");
-    printf("\n\n\t\t\t\t    SIGN UP");
-    printf("\n\t\t\t\t----------------------");
-    for(i=0;i<100;i++)
-    {
-      printf("\n\n\t\t\t\t  ENTER USERNAME: ");
-      scanf("%s",checker);
-        while(!feof(fp))
-        {
-          fread(&w[i],sizeof(w[i]),1,fp);
-          if(strcmp(checker,w[i].name)==0)
-            {
-            printf("\n\n\t\t\tUSERNAME ALREDY EXISTS");
-            system("cls");
-            reg();
-            }
-          else
-          {
-            strcpy(w[i].name,checker);
-            break;
-          }
-        }
-      printf("\n\n\t\t\t\t  DESIRED PASSWORD: ");
-      while((c=getch())!=13)
-        {
-          w[i].pass[z++]=c;
-          printf("%c",'*');
-        }
-      fwrite(&w[i],sizeof(w[i]),1,fp);
-      fclose(fp);
-      printf("\n\n\tPRESS ENTER if you agree with Username and Password");
-      printf("\n\n\t---------------------------------------------------");
-      if((c=getch())==13)
-        {
         system("cls");
-        printf("\n\n\t\tYOU ARE SUCCESSFULLY SIGNED");
-        printf("\n\n\t\tTRY LOGIN YOUR ACCOUNT?\n\n\t\t  ");
-        printf("> PRESS 1 FOR YES\n\n\t\t  > PRESS 2 FOR NO\n\n\t\t\t\t");
-        scanf("%d",&n);
-        switch(n)
-          {
-              case 1: system("cls");
-                    login();
-                    break;
-              case 2: system("cls");
-                    printf("\n\n\n\t\t\t\t\tTHANK YOU FOR SIGN UP!");
-                    break;
-          }
-        }
-        break;
+      {
+	  if(strcmp(user,"shiv")==0&&strcmp(pass,"shiv12")==0 || strcmp(user,"yogi")==0&&strcmp(pass,"12345")==0 || strcmp(user,"adi")==0&&strcmp(pass,"54321")==0)
+      {
+	  printf("=========================================");
+      printf("             ACCESS ACCEPTED\n");
+	  printf("=========================================");
+	  printf("\n           WELCOME FELLAS! %s !\n\n", user);
+      system("Klik Enter to See The Rules!");
+      system("cls");
+	  rules();
       }
-    getch();
-  }
-  
+      else{
+            printf("====================
+            printf("|  WRONG PASSWORD! |\n");
+            printf("====================
+            printf("\n\nPress ENTER to Re-login!");
+            system("cls");
+            goto login;
+          }
+     }
+}
+getch();
+}
+    
 void rules()
 {
     rules:
@@ -295,7 +217,7 @@ void motorHonda()
         printf("          LIST OF HONDA MOTORCYCLES          \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|1. Honda Scoopy                            |\n", pmHonda);
+        printf("|1. Honda Scoopy                            |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2017              |\n");
         printf("|Type                   : Scooter           |\n");
@@ -305,7 +227,7 @@ void motorHonda()
         printf("|Advisability           : 95/100            |\n");
         printf("|Rent Price             : Rp.40.000/day     |\n");
         printf("|-------------------------------------------|\n");
-        printf("|2. Honda Vario 150                         |\n", pmHonda);
+        printf("|2. Honda Vario 150                         |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
         printf("|Type                   : Scooter           |\n");
@@ -315,7 +237,7 @@ void motorHonda()
         printf("|Advisability           : 90/100            |\n");
         printf("|Rent Price             : Rp. 70.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|3. Honda PCX 150                           |\n", pmHonda);
+        printf("|3. Honda PCX 150                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Scooter           |\n");
@@ -325,7 +247,7 @@ void motorHonda()
         printf("|Advisability           : 92/100            |\n");
         printf("|Rent Price             : Rp. 80.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|4. Honda ADV 150                           |\n", pmHonda);
+        printf("|4. Honda ADV 150                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Scooter           |\n");
@@ -335,7 +257,7 @@ void motorHonda()
         printf("|Advisability           : 96/100            |\n");
         printf("|Rent Price             : Rp. 80.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|5. CBR 150R                                |\n", pmHonda);
+        printf("|5. CBR 150R                                |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
         printf("|Type                   : Sport Bike        |\n");
@@ -345,7 +267,7 @@ void motorHonda()
         printf("|Advisability           : 92/100            |\n");
         printf("|Rent Price             : Rp. 180.000/day   |\n");
         printf("|-------------------------------------------|\n");
-        printf("|6. Honda Beat                              |\n", pmHonda);
+        printf("|6. Honda Beat                              |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Scooter           |\n");
@@ -355,7 +277,7 @@ void motorHonda()
         printf("|Advisabilit            : 86/100            |\n");
         printf("|Rent Price             : Rp. 50.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|7. Honda Vario 110                         |\n", pmHonda);
+        printf("|7. Honda Vario 110                         |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Scooter           |\n");
@@ -365,7 +287,7 @@ void motorHonda()
         printf("|Advisability           : 90/100            |\n");
         printf("|Rent Price             : Rp. 50.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|8. CBR 250 RR                              |\n", pmHonda);
+        printf("|8. CBR 250 RR                              |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Sport Bike        |\n");
@@ -549,7 +471,7 @@ void motorYamaha()
         printf("         LIST OFT YAMAHA MOTORCYCLES         \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|1. Yamaha Nmax 155                         |\n", pmYamaha);
+        printf("|1. Yamaha Nmax 155                         |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
         printf("|Odometer               : 20198 KM          |\n");
@@ -558,7 +480,7 @@ void motorYamaha()
         printf("|Advisability           : 92/100            |\n");
         printf("|Rent Price             : Rp.80.000/day     |\n");
         printf("|-------------------------------------------|\n");
-        printf("|2. Yamaha Lexi                             |\n", pmYamaha);
+        printf("|2. Yamaha Lexi                             |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
         printf("|Odometer               : 24329 KM          |\n");
@@ -567,7 +489,7 @@ void motorYamaha()
         printf("|Advisability           : 94/100            |\n");
         printf("|Rent Price             : Rp.80.000/day     |\n");
         printf("|-------------------------------------------|\n");
-        printf("|3. Yamaha Aerox                            |\n", pmYamaha);
+        printf("|3. Yamaha Aerox                            |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Odometer               : 8325 KM           |\n");
@@ -576,7 +498,7 @@ void motorYamaha()
         printf("|Advisability           : 90/100            |\n");
         printf("|Rent Price             : Rp. 80.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|4. Yamaha XSR 155                          |\n", pmYamaha);
+        printf("|4. Yamaha XSR 155                          |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
         printf("|Odometer               : 3289 KM           |\n");
@@ -585,7 +507,7 @@ void motorYamaha()
         printf("|Advisability           : 98/100            |\n");
         printf("|Renxt Price             : Rp. 100.000/day  |\n");
         printf("|-------------------------------------------|\n");
-        printf("|5. Yamaha R15 V3                           |\n", pmYamaha);
+        printf("|5. Yamaha R15 V3                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
         printf("|Odometer               : 1288 KM           |\n");
@@ -594,7 +516,7 @@ void motorYamaha()
         printf("|Advisability           : 99/100            |\n");
         printf("|Rent Price             : Rp. 180.000/day   |\n");
         printf("|-------------------------------------------|\n");
-        printf("|5. Yamaha R25                              |\n", pmYamaha);
+        printf("|5. Yamaha R25                              |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Odometer               : 8223 KM           |\n");
@@ -740,7 +662,7 @@ void motorKawasaki()
         printf("         LIST OF KAWASAKI MOTORCYCLES        \n");
         printf("=============================================\n");
         printf("|-------------------------------------------|\n");
-        printf("|1. Kawasaki KLX 150BF                      |\n", pmKawasaki);
+        printf("|1. Kawasaki KLX 150BF                      |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Odometer               : 11349 KM          |\n");
@@ -749,7 +671,8 @@ void motorKawasaki()
         printf("|Advisability           : 91/100            |\n");
         printf("|Rent Price             : Rp.100.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|2. Kawasaki KLX 250                        |\n", pmKawasaki);
+        printf("|-------------------------------------------|\n");
+        printf("|2. Kawasaki KLX 250                        |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Odometer               : 7899 KM           |\n");
@@ -758,7 +681,8 @@ void motorKawasaki()
         printf("|Advisability           : 95/100            |\n");
         printf("|Rent Price             : Rp.160.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|3. Kawasaki Ninja 250                      |\n", pmKawasaki);
+        printf("|-------------------------------------------|\n");
+        printf("|3. Kawasaki Ninja 250                      |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Odometer               : 5008 KM           |\n");
@@ -767,7 +691,8 @@ void motorKawasaki()
         printf("|Advisability           : 98/100            |\n");
         printf("|Rent Price             : Rp.250.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|4. Kawasaki W175                           |\n", pmKawasaki);
+        printf("|-------------------------------------------|\n");
+        printf("|4. Kawasaki W175                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
         printf("|Odometer               : 12079 KM          |\n");
@@ -776,7 +701,7 @@ void motorKawasaki()
         printf("|Advisability           : 92/100            |\n");
         printf("|Rent Price             : Rp.140.000/day    |\n");
         printf("|-------------------------------------------|\n");
-        printf("|5. Kawasaki W250                           |\n", pmKawasaki);
+        printf("|5. Kawasaki W250                           |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Odometer               : 10233 KM          |\n");
@@ -901,8 +826,7 @@ void motorPrestige()
         printf("=============================================\n");
         printf("        LIST OF PRESTIGE MOTORCYCLES         \n");
         printf("=============================================\n");
-        printf("|-------------------------------------------|\n");
-        printf("|1. Harley Davidson Fat Boy                 |\n", pmPrestige);
+        printf("|1. Harley Davidson Fat Boy                 |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2018              |\n");
         printf("|Type                   : Cruiser           |\n");
@@ -910,7 +834,7 @@ void motorPrestige()
         printf("|Advisability           : 95/100            |\n");
         printf("|Rent Price             : Rp. 1.000.000/day |\n");
         printf("|-------------------------------------------|\n");
-        printf("|2. Yamaha R6                               |\n", pmPrestige);
+        printf("|2. Yamaha R6                               |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Sport Bike        |\n");
@@ -918,7 +842,7 @@ void motorPrestige()
         printf("|Advisability           : 96/100            |\n");
         printf("|Rent Price             : Rp. 800.000/day   |\n");
         printf("|-------------------------------------------|\n");
-        printf("|3. Kawasaki ZX-25R                         |\n", pmPrestige);
+        printf("|3. Kawasaki ZX-25R                         |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2020              |\n");
         printf("|Type                   : Sport Bike        |\n");
@@ -926,7 +850,7 @@ void motorPrestige()
         printf("|Advisability           : 98/100            |\n");
         printf("|Rent Price             : Rp. 450.000/day   |\n");
         printf("|-------------------------------------------|\n");
-        printf("|4. Kawasaki ZX-6R                          |\n", pmPrestige);
+        printf("|4. Kawasaki ZX-6R                          |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Sport Bike        |\n");
@@ -934,7 +858,7 @@ void motorPrestige()
         printf("|Advisability           : 98/100            |\n");
         printf("|Rent Price             : Rp. 820.000/day   |\n");
         printf("|-------------------------------------------|\n");
-        printf("|5. Honda CBR 600RR                         |\n", pmPrestige);
+        printf("|5. Honda CBR 600RR                         |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Type                   : Sport Bike        |\n");
@@ -942,7 +866,7 @@ void motorPrestige()
         printf("|Advisability           : 96/100            |\n");
         printf("|Rent Price             : Rp. 800.000/day   |\n");
         printf("|-------------------------------------------|\n");
-        printf("|6. Ducati Monster 696                      |\n", pmPrestige);
+        printf("|6. Ducati Monster 696                      |\n");
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2017              |\n");
         printf("|Type                   : Naked Bike        |\n");
