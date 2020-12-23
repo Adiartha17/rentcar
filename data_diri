@@ -6,7 +6,7 @@
 
 char name[30],pass[30];
 int n;
-char nama[50],asal,alamat,jenisKelamin;
+char nama[50],asal,alamat[100],jenisKelamin;
 int id,hp,menu, pilihanmotor, pilihanMobil;
 int pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi; //Pilihan motor & mobil sesuai dengan merk
 
@@ -117,7 +117,7 @@ void rules()
         printf("4.There are provisions for a charge if the vehicle being rented is damaged with a charge according to the cost of repairs\n");
         printf("5.The distance to use the rental vehicle is limited to the province\n");
         printf("6.Rental vehicles are not permitted for racing use\n");
-
+	printf("\n Click Enter To Continue");
         getch();
         system("cls");
         dataDiri();
@@ -131,12 +131,15 @@ void dataDiri()
         printf("===============================\n");
         printf("    INPUT YOUR PERSONAL DATA   \n");
         printf("===============================\n");
-        printf("Name            : ");
-        scanf("%s", &nama);
-        printf("Country         : ");
-        scanf("%s", &asal);
-        printf("Address         : ");
-        scanf("%s", &alamat);
+        fflush(stdin);
+	printf("Name            : ");
+        scanf("%[^\n]s", &nama);
+        fflush(stdin);
+	printf("Country         : ");
+        scanf("%[^\n]s", &asal);
+        fflush(stdin);
+	printf("Address         : ");
+        scanf("%[^\n]s", &alamat);
         printf("Gender          : ");
         scanf("%s", &jenisKelamin);
         printf("KTP/Passport    : ");
