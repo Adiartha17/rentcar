@@ -1106,7 +1106,7 @@ void mobilToyota()
         printf("|-------------------------------------------|\n");
         printf("============================================|\n");
         printf("|-------------------------------------------|\n");
-        printf("|6. Toyota Rush                             |\n", PMToyota);
+        printf("|7. Toyota Rush                             |\n", PMToyota);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2019              |\n");
         printf("|Color                  : Black             |\n");
@@ -1578,8 +1578,275 @@ void mobilDaihatsu()
                     goto mobilDaihatsu;
                 }
         break;
+	case 4:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMDaihatsu);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilDaihatsu;
+                }
+        break;
+        case 5:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMDaihatsu);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilDaihatsu;
+                }
+        break;
+        case 6:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMDaihatsu);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilDaihatsu;
+                }
+        break;
+	case 7:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMDaihatsu);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilDaihatsu;
+                }
+        break;
         }
         
+}
+void mobilMitsubishi()
+{
+	char decision;
+	mobilMitsubishi:
+	
+	printf("=============================================\n");
+        printf("            LIST OF MITSUBISHI CARS          \n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|1. Xpander                                 |\n", PMMitsubishi);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2019               |\n");
+        printf("|Color                  :White              |\n");
+        printf("|Odometer               :2132 KM            |\n");
+        printf("|Last Date Of Service   :21/10/2020         |\n");
+        printf("|Appropriateness        :88/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|2. Triton                                  |\n", PMMitsubishi);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2018               |\n");
+        printf("|Color                  :Black              |\n");
+        printf("|Odometer               :4387 KM            |\n");
+        printf("|Last Date Of Service   :09/01/2020         |\n");
+        printf("|Appropriateness        :83/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|3. Pajero                                  |\n", PMMitsubishi);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2020               |\n");
+        printf("|Color                  :White              |\n");
+        printf("|Odometer               :2031 KM            |\n");
+        printf("|Last Date Of Service   :15/11/2020         |\n");
+        printf("|Appropriateness        :95/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|4. Outlander                               |\n", PMMitsubishi);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2018               |\n");
+        printf("|Color                  :Red                |\n");
+        printf("|Odometer               :4152 KM            |\n");
+        printf("|Last Date Of Service   :17/10/2020         |\n");
+        printf("|Appropriateness        :85/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|5. Delica                                  |\n", PMMitsubishi);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2019               |\n");
+        printf("|Color                  :White              |\n");
+        printf("|Odometer               :2132 KM            |\n");
+        printf("|Last Date Of Service   :21/10/2020         |\n");
+        printf("|Appropriateness        :88/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|6. Mirage                                  |\n", PMMitsubishi);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2018               |\n");
+        printf("|Color                  :Black              |\n");
+        printf("|Odometer               :4387 KM            |\n");
+        printf("|Last Date Of Service   :09/01/2020         |\n");
+        printf("|Appropriateness        :83/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+        printf("=============================================\n");
+        printf("|-------------------------------------------|\n");
+        printf("|7. Eclipse Cross                           |\n", PMMitsubishi);
+        printf("|-------------------------------------------|\n");
+        printf("|Year                   :2020               |\n");
+        printf("|Color                  :White              |\n");
+        printf("|Odometer               :2031 KM            |\n");
+        printf("|Last Date Of Service   :15/11/2020         |\n");
+        printf("|Appropriateness        :95/100             |\n");
+        printf("|Rental Price           :Rp./Day            |\n");
+        printf("|-------------------------------------------|\n");
+
+        printf("Select your car : ");
+        scanf("%d", &PMMitsubishi);
+        switch(PMMitsubishi)
+        {
+        case 1:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMMitsubishi);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilMitsubishi;
+                }
+        break;
+        case 2:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMMitsubishi);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilMitsubishi;
+                }
+        break;
+        case 3:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMMitsubishi);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilMitsubishi;
+                }
+        break;
+        case 4:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMMitsubishi);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilMitsubishi;
+                }
+        break;
+	case 5:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMMitsubishi);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilMitsubishi;
+                }
+        break;
+        case 6:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMMitsubishi);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilMitsubishi;
+                }
+        break;
+        case 7:
+            printf("Are You Sure to Rent This Car?\n");
+            printf("(y/n)");
+            scanf("%s", &decision);
+                if (decision=='y')
+                {
+                printf("Proceeding Your Vehicle '%d'\n ", PMMitsubishi);
+                printf("Returning to Main Menu\n");
+                system("cls");
+                checkout();
+                }
+                    else if (decision=='n')
+                {
+                    goto mobilMitsubishi;
+                }
+        break;
+        }
 }
 void checkout(void){
     printf("PAYMENT RECEIPT\n");
