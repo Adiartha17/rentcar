@@ -1006,14 +1006,14 @@ void menuMobil()
     menumobil:
 
         printf("===============================\n");
-        printf("         DAFTAR MERK MOBIL     \n");
+        printf("         BRAND CAR'S LIST      \n");
         printf("===============================\n");
         printf("1. TOYOTA\n");
         printf("2. HONDA\n");
         printf("3. DAIHATSU\n");
         printf("4. MITSUBISHI\n");
         printf("===============================\n");
-        printf("Pilih Menu : ");
+        printf("Choose Menu : ");
         scanf("%d", &menu);
         printf("===============================\n");
         system("cls");
@@ -1031,6 +1031,12 @@ void menuMobil()
         case 4:
             mobilMitsubishi();
             break;
+	default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Brand");
+            getch();
+            system("cls");
+            goto menumobil;
         }
 }
 
@@ -1236,6 +1242,12 @@ void mobilToyota()
                     goto mobilToyota;
                 }
         break;
+	default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Car!");
+            getch();
+            system("cls");
+            goto mobilToyota;
         }
 }
 
@@ -1440,6 +1452,12 @@ void mobilHonda()
                      goto mobilHonda;
                 }
         break;
+	default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Car!");
+            getch();
+            system("cls");
+            goto mobilHonda;
         }
         
 }
@@ -1645,6 +1663,12 @@ void mobilDaihatsu()
                     goto mobilDaihatsu;
                 }
         break;
+	default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Car!");
+            getch();
+            system("cls");
+            goto mobilDaihatsu;
         }
         
 }
@@ -1849,6 +1873,12 @@ void mobilMitsubishi()
                     goto mobilMitsubishi;
                 }
         break;
+	default:
+            printf("Invalid Number!");
+            printf("Press Enter to Re-choosing Your Car!");
+            getch();
+            system("cls");
+            goto mobilMitsubishi;
         }
 }
 void checkout(void){
