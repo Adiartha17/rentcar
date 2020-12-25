@@ -30,7 +30,7 @@ void kwitansi();
 
 int main()
 {
-printf("\n                          ===============================================");
+    printf("\n                       ===============================================");
     printf("\n                      |                  WELCOME                    |");
     printf("\n                      |           CV. WISMA KARYA MOTOR             |");
     printf("\n                      |              Enjoy Your Ride                |");
