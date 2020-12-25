@@ -1882,108 +1882,249 @@ void mobilMitsubishi()
         }
 }
 void checkout(void){
-    printf("PAYMENT RECEIPT\n");
-    printf("------------------------------------------------------\n");
-    printf("Nama\t\t\t\t\t: %s\n", &nama);
-    printf("DETAIL PEMESANAN\t\t\t: \n\n");
-
-    printf("", &pmHonda);
+    printf ("HOW MANY DAYS RENT A VEHICLE :");
+    scanf  ("%d", &hari);
+    printf ("", pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi);
         if (pmHonda==1){
-        printf("|              Honda Scoopy                 |\n");
-        printf("|-------------------------------------------|\n");
-        printf("|Year                   : 2017              |\n");
-        printf("|Type                   : Scooter           |\n");
-        printf("|Odometer               : 3098 KM           |\n");
-        printf("|Topspeed               : 110cc             |\n");
-        printf("|Last Service           : 12/2/2020         |\n");
-        printf("|Advisability           : 95/100            |\n");
-        printf("|Rent Price             : Rp.40.000/day     |\n");
-        printf("|-------------------------------------------|\n");
+            totalbiaya = 40000 * hari;
+            printf ("Your Price Total : Rp.%.0f", totalbiaya);
+        }
+            else if (pmHonda==2){
+                totalbiaya = 70000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmHonda==3){
+                totalbiaya = 80000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmHonda==4){
+                totalbiaya = 80000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmHonda==5){
+                totalbiaya = 180000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmHonda==6){
+                totalbiaya = 50000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmHonda==7){
+                totalbiaya = 50000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmHonda==8){
+                totalbiaya = 250000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmYamaha==1){
+                totalbiaya = 80000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmYamaha==2){
+                totalbiaya = 80.000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmYamaha==3){
+                totalbiaya = 80.0000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmYamaha==4){
+                totalbiaya = 100000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmYamaha==5){
+                totalbiaya = 180000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmYamaha==6){
+                totalbiaya = 250000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmKawasaki==1){
+                totalbiaya = 100000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmKawasaki==2){
+                totalbiaya = 160000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmKawasaki==3){
+                totalbiaya = 250000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmKawasaki==4){
+                totalbiaya = 140000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmKawasaki==5){
+                totalbiaya = 220000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmPrestige==1){
+                totalbiaya = 1000000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmPrestige==2){
+                totalbiaya = 800000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmPrestige==3){
+                totalbiaya = 450000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmPrestige==4){
+                totalbiaya = 820000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmPrestige==5){
+                totalbiaya = 800000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (pmPrestige==6){
+                totalbiaya = 760000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+        getch();
+    kwitansi();
+
+}
+void kwitansi(){
+    FILE * fPointer;
+    fPointer = fopen("rentcar.txt", "a");
+    fclose(fPointer);
+
+    fPointer = fopen("rentcar.txt", "a");
+    fprintf(fPointer, "\t\t\t=============================\n");
+    fprintf(fPointer, "\t\t\t --------------------------- \n");
+    fprintf(fPointer, "\t\t\t       PAYMENT RECEIPT       \n");
+    fprintf(fPointer, "\t\t\t    CV. WISMA KARYA MOTOR    \n");
+    fprintf(fPointer, "\t\t\t --------------------------- \n");
+    fprintf(fPointer, "\t\t\t=============================\n");
+    fprintf(fPointer, "NAME\t\t\t\t: %s\n", &nama);
+    fprintf(fPointer, "ORDERS DETAIL\t\t\t: \n\n");
+    fprintf(fPointer, "", pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi);
+    
+        if (pmHonda==1){
+        fprintf(fPointer, "|-------------------------------------------|\n");
+	fprintf(fPointer, "|              Honda Scoopy                 |\n");
+        fprintf(fPointer, "|-------------------------------------------|\n");
+        fprintf(fPointer, "|Year                   : 2017              |\n");
+        fprintf(fPointer, "|Type                   : Scooter           |\n");
+        fprintf(fPointer, "|Odometer               : 3098 KM           |\n");
+        fprintf(fPointer, "|Topspeed               : 110cc             |\n");
+        fprintf(fPointer, "|Last Service           : 12/2/2020         |\n");
+        fprintf(fPointer, "|Advisability           : 95/100            |\n");
+        fprintf(fPointer, "|Rent Price             : Rp.40.000/day     |\n");
+        fprintf(fPointer, "|-------------------------------------------|\n");
+	fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+        fclose(fPointer);
 
         }
         else if (pmHonda==2){
-            printf("|             Honda Vario 150               |\n");
-            printf("|-------------------------------------------|\n");
-            printf("|Year                   : 2018              |\n");
-            printf("|Type                   : Scooter           |\n");
-            printf("|Odometer               : 12561 KM          |\n");
-            printf("|Topspeed               : 150cc             |\n");
-            printf("|Last Service           : 21/5/2020         |\n");
-            printf("|Advisability           : 90/100            |\n");
-            printf("|Rent Price             : Rp. 70.000/day    |\n");
-            printf("|-------------------------------------------|\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "|             Honda Vario 150               |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2018              |\n");
+            fprintf(fPointer, "|Type                   : Scooter           |\n");
+            fprintf(fPointer, "|Odometer               : 12561 KM          |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 21/5/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 90/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 70.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
         }
         else if (pmHonda==3){
-            printf("|              Honda PCX 150                |\n");
-            printf("|-------------------------------------------|\n");
-            printf("|Year                   : 2019              |\n");
-            printf("|Type                   : Scooter           |\n");
-            printf("|Odometer               : 9821 KM           |\n");
-            printf("|Topspeed               : 150cc             |\n");
-            printf("|Last Service           : 7/3/2020          |\n");
-            printf("|Advisability           : 92/100            |\n");
-            printf("|Rent Price             : Rp. 80.000/day    |\n");
-            printf("|-------------------------------------------|\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "|              Honda PCX 150                |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Scooter           |\n");
+            fprintf(fPointer, "|Odometer               : 9821 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 7/3/2020          |\n");
+            fprintf(fPointer, "|Advisability           : 92/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 80.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
         }
         else if (pmHonda==4){
-            printf("|              Honda ADV 150                |\n");
-            printf("|-------------------------------------------|\n");
-            printf("|Year                   : 2019              |\n");
-            printf("|Type                   : Scooter           |\n");
-            printf("|Odometer               : 6877 KM           |\n");
-            printf("|Topspeed               : 150cc             |\n");
-            printf("|Last Service           : 9/6/2020          |\n");
-            printf("|Advisability           : 96/100            |\n");
-            printf("|Rent Price             : Rp. 80.000/day    |\n");
-            printf("|-------------------------------------------|\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "|              Honda ADV 150                |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Scooter           |\n");
+            fprintf(fPointer, "|Odometer               : 6877 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 9/6/2020          |\n");
+            fprintf(fPointer, "|Advisability           : 96/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 80.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
         }
         else if (pmHonda==5){
-            printf("|                CBR 150R                   |\n");
-            printf("|-------------------------------------------|\n");
-            printf("|Year                   : 2020              |\n");
-            printf("|Type                   : Sport Bike        |\n");
-            printf("|Odometer               : 5188 KM           |\n");
-            printf("|Topspeed               : 150cc             |\n");
-            printf("|Last Service           : 21/5/2020         |\n");
-            printf("|Advisability           : 92/100            |\n");
-            printf("|Rent Price             : Rp. 180.000/day   |\n");
-            printf("|-------------------------------------------|\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "|                CBR 150R                   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2020              |\n");
+            fprintf(fPointer, "|Type                   : Sport Bike        |\n");
+            fprintf(fPointer, "|Odometer               : 5188 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 21/5/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 92/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 180.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
         }
         else if (pmHonda==6){
-            printf("|               Honda Beat                  |\n");
-            printf("|-------------------------------------------|\n");
-            printf("|Year                   : 2019              |\n");
-            printf("|Type                   : Scooter           |\n");
-            printf("|Odometer               : 7719 KM           |\n");
-            printf("|Topspeed               : 110cc             |\n");
-            printf("|Last Service           : 11/4/2020         |\n");
-            printf("|Advisabilit            : 86/100            |\n");
-            printf("|Rent Price             : Rp. 50.000/day    |\n");
-            printf("|-------------------------------------------|\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "|               Honda Beat                  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Scooter           |\n");
+            fprintf(fPointer, "|Odometer               : 7719 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 110cc             |\n");
+            fprintf(fPointer, "|Last Service           : 11/4/2020         |\n");
+            fprintf(fPointer, "|Advisabilit            : 86/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 50.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
         }
         else if (pmHonda==7){
-            printf("|             Honda Vario 110               |\n");
-            printf("|-------------------------------------------|\n");
-            printf("|Year                   : 2019              |\n");
-            printf("|Type                   : Scooter           |\n");
-            printf("|Odometer               : 6239 KM           |\n");
-            printf("|Topspeed               : 110cc             |\n");
-            printf("|Last Price             : 13/7/2020         |\n");
-            printf("|Advisability           : 90/100            |\n");
-            printf("|Rent Price             : Rp. 50.000/day    |\n");
-            printf("|-------------------------------------------|\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "|             Honda Vario 110               |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Scooter           |\n");
+            fprintf(fPointer, "|Odometer               : 6239 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 110cc             |\n");
+            fprintf(fPointer, "|Last Price             : 13/7/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 90/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 50.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
         }
         else if (pmHonda==8){
-            printf("|               CBR 250 RR                  |\n");
-            printf("|-------------------------------------------|\n");
-            printf("|Year                   : 2019              |\n");
-            printf("|Type                   : Sport Bike        |\n");
-            printf("|Odometer               : 6119 KM           |\n");
-            printf("|Topspeed               : 250cc             |\n");
-            printf("|Last Price             : 18/6/2020         |\n");
-            printf("|Advisability           : 94/100            |\n");
-            printf("|Rent Price             : Rp. 250.000/day   |\n");
-            printf("|-------------------------------------------|\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "|               CBR 250 RR                  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Sport Bike        |\n");
+            fprintf(fPointer, "|Odometer               : 6119 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 250cc             |\n");
+            fprintf(fPointer, "|Last Price             : 18/6/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 94/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 250.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
         }
     }
 
