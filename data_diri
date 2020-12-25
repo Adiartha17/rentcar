@@ -162,14 +162,15 @@ void menuUtama()
 {
     pilihan:
 
-        printf("Menu	:\n");
-        printf("===============================\n");
-        printf("| 01. Motorcycle              |\n");
-        printf("| 02. Car                     |\n");
-        printf("===============================\n");
-        printf("Choose Menu     : ");
+        printf(" ===============================\n");
+        printf(" | Menu	:                      |\n");
+        printf(" ===============================\n");
+        printf(" | 01. Motorcycle              |\n");
+        printf(" | 02. Car                     |\n");
+        printf(" ===============================\n");
+        printf(" | Choose Menu : ");
         scanf("%d", &menu);
-        printf("===============================\n");
+        printf(" ===============================\n");
         system("cls");
         switch(menu)
         {
@@ -192,12 +193,12 @@ void menuMotor()
     menumotor:
 
         printf("===============================\n");
-        printf("   LIST OF MOTORCYCLES BRAND   \n");
+        printf("|  LIST OF MOTORCYCLES BRAND  |\n");
         printf("===============================\n");
-        printf("1. Honda\n");
-        printf("2. Yamaha\n");
-        printf("3. Kawasaki\n");
-        printf("4. Prestige\n");
+        printf("| 01. Honda                   |\n");
+        printf("| 02. Yamaha                  |\n");
+        printf("| 03. Kawasaki                |\n");
+        printf("| 04. Prestige                |\n");
         printf("===============================\n");
         printf("Choose Menu : ");
         scanf("%d", &menu);
@@ -564,7 +565,7 @@ void motorYamaha()
         case 2:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmYamaha);
@@ -583,7 +584,7 @@ void motorYamaha()
         case 3:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmYamaha);
@@ -602,7 +603,7 @@ void motorYamaha()
         case 4:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmYamaha);
@@ -621,7 +622,7 @@ void motorYamaha()
         case 5:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmYamaha);
@@ -640,7 +641,7 @@ void motorYamaha()
         case 6:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmYamaha);
@@ -745,7 +746,7 @@ void motorKawasaki()
         case 2:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
@@ -764,7 +765,7 @@ void motorKawasaki()
         case 3:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
@@ -783,7 +784,7 @@ void motorKawasaki()
         case 4:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
@@ -802,7 +803,7 @@ void motorKawasaki()
         case 5:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmKawasaki);
@@ -875,7 +876,7 @@ void motorPrestige()
         printf("|Advisability           : 96/100            |\n");
         printf("|Rent Price             : Rp. 800.000/day   |\n");
         printf("|-------------------------------------------|\n");
-        printf("|6. Ducati Monster 696                      |\n", Prestige);
+        printf("|6. Ducati Monster 696                      |\n", pmPrestige);
         printf("|-------------------------------------------|\n");
         printf("|Year                   : 2017              |\n");
         printf("|Type                   : Naked Bike        |\n");
@@ -909,7 +910,7 @@ void motorPrestige()
         case 2:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmPrestige);
@@ -928,7 +929,7 @@ void motorPrestige()
         case 3:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmPrestige);
@@ -947,7 +948,7 @@ void motorPrestige()
         case 4:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmPrestige);
@@ -966,7 +967,7 @@ void motorPrestige()
         case 5:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmPrestige);
@@ -985,7 +986,7 @@ void motorPrestige()
         case 6:
             printf("Are You Sure to Rent This Motorcycle?\n");
             printf("(y/n)");
-            scanf("%c", &decision);
+            scanf("%s", &decision);
                 if (decision=='y')
                 {
                     printf("Proceeding Your Vehicle '%d' ", pmPrestige);
