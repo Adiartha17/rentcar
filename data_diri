@@ -4,7 +4,7 @@
 #include <time.h>
 #include <conio.h>
 
-char name[30],pass[30];
+char user[30],pass[30];
 int n;
 char nama[50],asal,alamat[100],jenisKelamin;
 int id,hp,menu, pilihanmotor, pilihanMobil;
@@ -57,6 +57,7 @@ printf("\n                          ============================================
         break;
     default: printf("\n\n                             NO MATCH FOUND");
         printf("\n\n                        Press Enter to re-Enter the choice");
+	getch();
         system("cls");
         goto Login;
     }
@@ -64,13 +65,15 @@ printf("\n                          ============================================
 }
 void login()
 {
-      char c,name[30],pass[30]; int z=0;
+	login:
+{
+      char c,user[30],pass[30]; int z=0;
 {
       printf("\n\n\t\t\t========================");
       printf("\n\n\t\t\t\t       LOGIN");
       printf("\n\t\t\t\t========================");
       printf("\n\n\t\t\tUSERNAME: ");
-      scanf("%s",name);
+      scanf("%s",user);
       printf("\n\n\t\t\tPASSWORD: ");
       while((c=getch())!=13)
         {
@@ -80,25 +83,27 @@ void login()
         pass[z]='\0';
         system("cls");
       {
-	  if(strcmp(user,"shiv")==0&&strcmp(pass,"shiv12")==0 || strcmp(user,"yogi")==0&&strcmp(pass,"12345")==0 || strcmp(user,"adi")==0&&strcmp(pass,"54321")==0)
-      {
-	  printf("=========================================");
-      printf("             ACCESS ACCEPTED\n");
-	  printf("=========================================");
+	  if(strcmp(user,"shiv")==0&&strcmp(pass,"shiv12")==0 || strcmp(user,"yogi")==0&&strcmp(pass,"12345")==0 || strcmp(user,"adi")==0&&strcmp(pass,"54321")==0){
+	  printf("=========================================\n");
+          printf("             ACCESS ACCEPTED\n");
+	  printf("=========================================\n");
 	  printf("\n           WELCOME FELLAS! %s !\n\n", user);
-      system("Klik Enter to See The Rules!");
+      printf("Klik Enter to See The Rules!\n");
+      getch();
       system("cls");
 	  rules();
       }
       else{
-            printf("====================
+            printf("====================\n");
             printf("|  WRONG PASSWORD! |\n");
-            printf("====================
+            printf("====================\n");
             printf("\n\nPress ENTER to Re-login!");
+	    getch();
             system("cls");
             goto login;
           }
      }
+}
 }
 getch();
 }
