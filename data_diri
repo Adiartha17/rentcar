@@ -1990,7 +1990,124 @@ void checkout(void){
                 totalbiaya = 760000 * hari;
                 printf ("Your Price Total : Rp.%.0f", totalbiaya);
             }
-        getch();
+	    else if (PMToyota==1){
+                totalbiaya = 500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMToyota==2){
+                totalbiaya = 1000000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMToyota==3){
+                totalbiaya = 800000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }else if (PMToyota==4){
+                totalbiaya = 500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMToyota==5){
+                totalbiaya = 1000000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMToyota==6){
+                totalbiaya = 500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMToyota==7){
+                totalbiaya = 600000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMHonda==1){
+                totalbiaya = 500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMHonda==2){
+                totalbiaya = 600000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMHonda==3){
+                totalbiaya = 800000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMHonda==4){
+                totalbiaya = 800000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMHonda==5){
+                totalbiaya = 700000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMHonda==6){
+                totalbiaya = 500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMHonda==7){
+                totalbiaya = 800000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMDaihatsu==1){
+                totalbiaya = 700000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMDaihatsu==2){
+                totalbiaya = 600000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMDaihatsu==3){
+                totalbiaya = 700000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMDaihatsu==4){
+                totalbiaya = 500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMDaihatsu==5){
+                totalbiaya = 500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMDaihatsu==6){
+                totalbiaya = 600000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMDaihatsu==7){
+                totalbiaya = 600000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMMitsubishi==1){
+                totalbiaya = 1500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMMitsubishi==2){
+                totalbiaya = 1000000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMMitsubishi==3){
+                totalbiaya = 2000000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMMitsubishi==4){
+                totalbiaya = 2500000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMMitsubishi==5){
+                totalbiaya = 1000000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMMitsubishi==6){
+                totalbiaya = 900000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+            else if (PMMitsubishi==7){
+                totalbiaya = 900000 * hari;
+                printf ("Your Price Total : Rp.%.0f", totalbiaya);
+            }
+        
+	printf ("\n");
+        printf ("===================================================\n");
+        printf ("PLEASE GO TO OUR OFFICE TO GET YOUR PAYMENT RECEIPT\n");
+        printf ("===================================================\n");
+        
+	getch();
     kwitansi();
 
 }
@@ -2129,6 +2246,630 @@ void kwitansi(){
             fprintf(fPointer, "|Rent Price             : Rp. 250.000/day   |\n");
             fprintf(fPointer, "|-------------------------------------------|\n");
 	    fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+	else if (pmYamaha==1){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|             Yamaha Nmax 155               |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2018              |\n");
+            fprintf(fPointer, "|Odometer               : 20198 KM          |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 26/11/2020        |\n");
+            fprintf(fPointer, "|Advisability           : 92/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp.80.000/day     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmYamaha==2){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Yamaha Lexi                  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2018              |\n");
+            fprintf(fPointer, "|Odometer               : 24329 KM          |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 12/1/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 94/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp.80.000/day     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmYamaha==3){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|             Yamaha Aerox                  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Odometer               : 8325 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 17/8/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 90/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 80.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmYamaha==4){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|             Yamaha XSR 155                |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2020              |\n");
+            fprintf(fPointer, "|Odometer               : 3289 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 9/6/2020          |\n");
+            fprintf(fPointer, "|Advisability           : 98/100            |\n");
+            fprintf(fPointer, "|Renxt Price             : Rp. 100.000/day  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmYamaha==5){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|             Yamaha R15 V3                 |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2020              |\n");
+            fprintf(fPointer, "|Odometer               : 1288 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : N/A               |\n");
+            fprintf(fPointer, "|Advisability           : 99/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 180.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmYamaha==6){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Yamaha R25                   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Odometer               : 8223 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 250cc             |\n");
+            fprintf(fPointer, "|Last Service           : 12/4/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 92/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 250.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmKawasaki==1){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|            Kawasaki KLX 150B              |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Odometer               : 11349 KM          |\n");
+            fprintf(fPointer, "|Topspeed               : 150cc             |\n");
+            fprintf(fPointer, "|Last Service           : 9/10/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 91/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp.100.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmKawasaki==2){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|            Kawasaki KLX 250               |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Odometer               : 7899 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 250cc             |\n");
+            fprintf(fPointer, "|Last Service           : 26/11/2020        |\n");
+            fprintf(fPointer, "|Advisability           : 95/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp.160.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmKawasaki==3){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|            Kawasaki Ninja 250             |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Odometer               : 5008 KM           |\n");
+            fprintf(fPointer, "|Topspeed               : 250cc             |\n");
+            fprintf(fPointer, "|Last Service           : 10/12/2020        |\n");
+            fprintf(fPointer, "|Advisability           : 98/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp.250.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmKawasaki==4){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Kawasaki W175                |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2018              |\n");
+            fprintf(fPointer, "|Odometer               : 12079 KM          |\n");
+            fprintf(fPointer, "|Topspeed               : 175cc             |\n");
+            fprintf(fPointer, "|Last Service           : 11/9/2020         |\n");
+            fprintf(fPointer, "|Advisability           : 92/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp.140.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmKawasaki==5){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Kawasaki W250                |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Odometer               : 10233 KM          |\n");
+            fprintf(fPointer, "|Topspeed               : 250cc             |\n");
+            fprintf(fPointer, "|Last Service           : 30/11/2020        |\n");
+            fprintf(fPointer, "|Advisability           : 93/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp.220.000/day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmPrestige==1){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|          Harley Davidson Fat Boy          |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2018              |\n");
+            fprintf(fPointer, "|Type                   : Cruiser           |\n");
+            fprintf(fPointer, "|Topspeed               : 1868cc            |\n");
+            fprintf(fPointer, "|Advisability           : 95/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 1.000.000/day |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmPrestige==2){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                Yamaha R6                  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Sport Bike        |\n");
+            fprintf(fPointer, "|Topspeed               : 600cc             |\n");
+            fprintf(fPointer, "|Advisability           : 96/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 800.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmPrestige==3){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Kawasaki ZX-25R              |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2020              |\n");
+            fprintf(fPointer, "|Type                   : Sport Bike        |\n");
+            fprintf(fPointer, "|Topspeed               : 250cc             |\n");
+            fprintf(fPointer, "|Advisability           : 98/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 450.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmPrestige==4){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Kawasaki ZX-6R               |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Sport Bike        |\n");
+            fprintf(fPointer, "|Topspeed               : 636cc             |\n");
+            fprintf(fPointer, "|Advisability           : 98/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 820.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmPrestige==5){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|             Honda CBR 600RR               |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Type                   : Sport Bike        |\n");
+            fprintf(fPointer, "|Topspeed               : 600cc             |\n");
+            fprintf(fPointer, "|Advisability           : 96/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 800.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (pmPrestige==6){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|            Ducati Monster 696             |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2017              |\n");
+            fprintf(fPointer, "|Type                   : Naked Bike        |\n");
+            fprintf(fPointer, "|Topspeed               : 600cc             |\n");
+            fprintf(fPointer, "|Advisability           : 92/100            |\n");
+            fprintf(fPointer, "|Rent Price             : Rp. 760.000/day   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMToyota==1){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                 Avanza                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2017              |\n");
+            fprintf(fPointer, "|Color                  : Black             |\n");
+            fprintf(fPointer, "|Odometer               : 3098 KM           |\n");
+            fprintf(fPointer, "|Last Date Of service   : 12/02/2020        |\n");
+            fprintf(fPointer, "|Appropriateness        : 95/100            |\n");
+            fprintf(fPointer, "|Rental Price           : Rp.500.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMToyota==2){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Avanza Veloz                 |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2020              |\n");
+            fprintf(fPointer, "|Color                  : White             |\n");
+            fprintf(fPointer, "|Odometer               : 2365 KM           |\n");
+            fprintf(fPointer, "|Last Date Of service   : 02/06/2020        |\n");
+            fprintf(fPointer, "|Appropriateness        : 97/100            |\n");
+            fprintf(fPointer, "|Rental Price           : Rp.1.000.000/Day  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMToyota==3){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Kijang Innova                |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2016              |\n");
+            fprintf(fPointer, "|Color                  : Silver            |\n");
+            fprintf(fPointer, "|Odometer               : 9345 KM           |\n");
+            fprintf(fPointer, "|Last Date Of service   : 25/02/2019        |\n");
+            fprintf(fPointer, "|Appropriateness        : 80/100            |\n");
+            fprintf(fPointer, "|Rental Price           : Rp.800.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMToyota==4){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  Agya                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Color                  : White             |\n");
+            fprintf(fPointer, "|Odometer               : 2100 KM           |\n");
+            fprintf(fPointer, "|Last Date Of service   : 09/01/2020        |\n");
+            fprintf(fPointer, "|Appropriateness        : 95/100            |\n");
+            fprintf(fPointer, "|Rental Price           : Rp.500.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMToyota==5){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                Fortuner                   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2018              |\n");
+            fprintf(fPointer, "|Color                  : Black             |\n");
+            fprintf(fPointer, "|Odometer               : 3544 KM           |\n");
+            fprintf(fPointer, "|Last Date Of service   : 17/02/2019        |\n");
+            fprintf(fPointer, "|Appropriateness        : 90/100            |\n");
+            fprintf(fPointer, "|Rental Price           : Rp.1.000.000/Day  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMToyota==6){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                 Yaris                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Color                  : White             |\n");
+            fprintf(fPointer, "|Odometer               : 2241 KM           |\n");
+            fprintf(fPointer, "|Last Date Of service   : 05/11/2020        |\n");
+            fprintf(fPointer, "|Appropriateness        : 97/100            |\n");
+            fprintf(fPointer, "|Rental Price           : Rp.500.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMToyota==7){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Toyota Rush                  |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   : 2019              |\n");
+            fprintf(fPointer, "|Color                  : Black             |\n");
+            fprintf(fPointer, "|Odometer               : 2508 KM           |\n");
+            fprintf(fPointer, "|Last Date Of service   : 05/05/2020        |\n");
+            fprintf(fPointer, "|Appropriateness        : 98/100            |\n");
+            fprintf(fPointer, "|Rental Price           : Rp.600.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMHonda==1){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  Jazz                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :3678 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :06/10/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :80/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp.500.000/Day     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMHonda==2){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  Brio                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2018               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :2198 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :11/01/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :88/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp600.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMHonda==3){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  CR-V                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :3345 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :13/12/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :85/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp800.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMHonda==4){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  HR-V                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :4078 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :09/04/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :80/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp800.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMHonda==5){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|               Honda Civic                 |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :4073 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :12/02/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :75/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp700.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMHonda==6){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|             Honda Mobilio                 |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2016               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :4478 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :15/03/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :70/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp500.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMHonda==7){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  BR-V                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :4008 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :27/11/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :75/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp800.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMDaihatsu==1){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  Terios                   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2018               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :3987 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :30/11/2019         |\n");
+            fprintf(fPointer, "|Appropriateness        :85/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp700.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMDaihatsu==2){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                   Ayla                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2019               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :2564 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :09/01/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :90/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp600.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMDaihatsu==3){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|               Gran Max MB                 |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2018               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :3778 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :25/05/2019         |\n");
+            fprintf(fPointer, "|Appropriateness        :80/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp700.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMDaihatsu==4){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  Luxio                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :3997 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :29/10/2019         |\n");
+            fprintf(fPointer, "|Appropriateness        :75/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp500.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMDaihatsu==5){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                 Sirion                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :3966 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :30/06/2019         |\n");
+            fprintf(fPointer, "|Appropriateness        :80/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp500.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMDaihatsu==6){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|             Gran Max Pick-Up              |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2018               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :3543 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :21/07/2019         |\n");
+            fprintf(fPointer, "|Appropriateness        :80/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp600.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMDaihatsu==7){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                 Xenia                     |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2017               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :3985 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :14/03/2019         |\n");
+            fprintf(fPointer, "|Appropriateness        :80/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp600.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMMitsubishi==1){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                Xpander                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2019               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :2132 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :21/10/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :88/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp1.500.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMMitsubishi==2){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                 Triton                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2018               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :4387 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :09/01/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :83/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp1.000.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMMitsubishi==3){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                  Pajero                   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2020               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :2031 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :15/11/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :95/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp2.000.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMMitsubishi==4){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|               Outlander                   |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2018               |\n");
+            fprintf(fPointer, "|Color                  :Red                |\n");
+            fprintf(fPointer, "|Odometer               :4152 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :17/10/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :85/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp2.500.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMMitsubishi==5){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                 Delica                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2019               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :2132 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :21/10/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :88/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp1.000.000/Day    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMMitsubishi==6){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|                 Mirage                    |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2018               |\n");
+            fprintf(fPointer, "|Color                  :Black              |\n");
+            fprintf(fPointer, "|Odometer               :4387 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :09/01/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :83/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp900.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
+            fclose(fPointer);
+        }
+        else if (PMMitsubishi==7){
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|              Eclipse Cross                |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "|Year                   :2020               |\n");
+            fprintf(fPointer, "|Color                  :White              |\n");
+            fprintf(fPointer, "|Odometer               :2031 KM            |\n");
+            fprintf(fPointer, "|Last Date Of Service   :15/11/2020         |\n");
+            fprintf(fPointer, "|Appropriateness        :95/100             |\n");
+            fprintf(fPointer, "|Rental Price           :Rp900.000/Day      |\n");
+            fprintf(fPointer, "|-------------------------------------------|\n");
+            fprintf(fPointer, "TOTAL PRICE :Rp.%.0f", totalbiaya);
             fclose(fPointer);
         }
     }
