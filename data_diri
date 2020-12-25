@@ -114,16 +114,19 @@ void rules()
     rules:
 
         printf("\n \n");
-        printf("=========================================================================================================================================\n");
-        printf("                                                                RULES                                                                    \n");
-        printf("=========================================================================================================================================\n");
-        printf("1.Vehicle renters must have a Driving License in accordance with the car being rented\n");
-        printf("2.Have an ID Card that will be kept by the owner of CV Wisma Karya Motor during the rental period\n");
-        printf("3.There are provisions for a charge if the lease time limit is exceeded with the price of charge equal to the rental price of the vehicle\n");
-        printf("4.There are provisions for a charge if the vehicle being rented is damaged with a charge according to the cost of repairs\n");
-        printf("5.The distance to use the rental vehicle is limited to the province\n");
-        printf("6.Rental vehicles are not permitted for racing use\n");
-	printf("\n Click Enter To Continue");
+        printf("	=========================================================================================================================================\n");
+        printf("        |                                                       	 RULES                                                                  |\n");
+        printf("	=========================================================================================================================================\n");
+        printf("	| 01.Vehicle renters must have a Driving License in accordance with the car being rented						|\n");
+        printf("	| 02.Have an ID Card that will be kept by the owner of CV Wisma Karya Motor during the rental period					|\n");
+        printf("	| 03.There are provisions for a charge if the lease time limit is exceeded with the price of charge equal to the			|\n");
+	printf("	|    rental price of the vehicle													|\n");
+        printf("	| 04.There are provisions for a charge if the vehicle being rented is damaged with a charge according to the cost of repairs		|\n");
+        printf("	| 05.The distance to use the rental vehicle is limited to the province									|\n");
+        printf("	| 06.Rental vehicles are not permitted for racing use											|\n");
+	printf("    	-----------------------------------------------------------------------------------------------------------------------------------------\n");
+	printf("	|							Click Enter To Continue								|\n");
+	printf("    	-----------------------------------------------------------------------------------------------------------------------------------------\n");
         getch();
         system("cls");
         dataDiri();
@@ -2118,6 +2121,7 @@ void kwitansi(){
     fclose(fPointer);
 
     fPointer = fopen("rentcar.txt", "a");
+    fprintf(fPointer, "\n");
     fprintf(fPointer, "\t\t\t=============================\n");
     fprintf(fPointer, "\t\t\t --------------------------- \n");
     fprintf(fPointer, "\t\t\t       PAYMENT RECEIPT       \n");
