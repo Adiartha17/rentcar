@@ -4,10 +4,11 @@
 #include <time.h>
 #include <conio.h>
 
-char user[30],pass[30];
+char user[30], pass[30];
 int n;
-char nama[50],asal,alamat[100],jenisKelamin;
-int id,hp,menu, pilihanmotor, pilihanMobil;
+char nama[50], asal, alamat[100], jenisKelamin;
+int id, hp, menu, hari, pilihanmotor, pilihanMobil;
+float totalbiaya;
 int pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi; //Pilihan motor & mobil sesuai dengan merk
 
 void login();
