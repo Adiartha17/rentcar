@@ -30,25 +30,34 @@ void kwitansi();
 
 int main()
 {
-    printf("\n                      ===============================================");
-    printf("\n                      |                  WELCOME                    |");
-    printf("\n                      |           CV. WISMA KARYA MOTOR             |");
-    printf("\n                      |              Enjoy Your Ride                |");
-    printf("\n                      |           VEHICLE RENTAL PROGRAM            |");
-    printf("\n                      -----------------------------------------------");
-    printf("\n                      |           PRESS ENTER TO PROCEED            |");
-    printf("\n                      -----------------------------------------------");
+    printf("                                                                |-------------------------------------|\n");
+    printf("                                                                | Please Enter Program in Full Screen |\n");
+    printf("                                                                |             Thank You               |\n");
+    printf("                                                                |-------------------------------------|\n");
+    printf("                                                                |        Press Enter to Proceed       |\n");
+    printf("                                                                |-------------------------------------|\n");
+    getch();
+    system("cls");
+    
+    printf("\n                      					===============================================");
+    printf("\n                      					|                  WELCOME                    |");
+    printf("\n                      					|           CV. WISMA KARYA MOTOR             |");
+    printf("\n                      					|              Enjoy Your Ride                |");
+    printf("\n                      					|           VEHICLE RENTAL PROGRAM            |");
+    printf("\n                      					-----------------------------------------------");
+    printf("\n                      					|           PRESS ENTER TO PROCEED            |");
+    printf("\n                      					-----------------------------------------------");
     getch();
     system ("cls");
 
     Login:
-    printf("\n                            ==================================");
-    printf("\n                            | 1.|         LOGIN              |");
-    printf("\n                            ==================================");
-    printf("\n                            |                                |");
-    printf("\n                            |        ENTER YOUR CHOICE       |");
-    printf("\n                            |_____|                    |_____|");
-    printf("\n                                             ");
+    printf("\n                            				     ==================================");
+    printf("\n                            				     | 1.|         LOGIN              |");
+    printf("\n                            				     ==================================");
+    printf("\n                            				     |                                |");
+    printf("\n                            				     |        ENTER YOUR CHOICE       |");
+    printf("\n                            				     |_____|                    |_____|");
+    printf("\n                                          				     ");
     scanf("%d",&n);
     system("cls");
     switch(n)
@@ -56,8 +65,10 @@ int main()
     case 1:
         login();
         break;
-    default: printf("\n\n                             NO MATCH FOUND");
-        printf("\n\n                        Press Enter to re-Enter the choice");
+    default: printf("\n\n						      ================================\n");
+    	printf("			                             	      |       NO MATCH FOUND!	     |\n");
+	printf("							      ================================\n");
+        printf("				                             Press Enter to re-Enter the choice");
 	getch();
         system("cls");
         goto Login;
@@ -70,12 +81,12 @@ void login()
 {
       char c,user[30],pass[30]; int z=0;
 {
-      printf("\n\t\t\t\t========================");
-      printf("\n\t\t\t\t       LOGIN");
-      printf("\n\t\t\t\t========================");
-      printf("\n\n\t\t\tUSERNAME: ");
+      printf("									 ========================\n");
+      printf("									 |	  LOGIN		|\n");
+      printf("									 ========================\n");
+      printf("									  USERNAME: ");
       scanf("%s",user);
-      printf("\n\n\t\t\tPASSWORD: ");
+      printf("									  PASSWORD: ");
       while((c=getch())!=13)
         {
           pass[z++]=c;
@@ -85,20 +96,24 @@ void login()
         system("cls");
       {
 	  if(strcmp(user,"shiv")==0&&strcmp(pass,"shiv12")==0 || strcmp(user,"yogi")==0&&strcmp(pass,"12345")==0 || strcmp(user,"adi")==0&&strcmp(pass,"54321")==0){
-	  printf("=========================================\n");
-          printf("             ACCESS ACCEPTED\n");
-	  printf("=========================================\n");
-	  printf("\n           WELCOME FELLAS! %s !\n\n", user);
-      printf("Klik Enter to See The Rules!\n");
+	  printf("							 =========================================\n");
+	  printf("							 |---------------------------------------|\n");
+          printf("             						 |	      ACCESS ACCEPTED		 |\n");
+	  printf("							 |---------------------------------------|\n");
+	  printf("							 =========================================\n");
+	  printf("\n           							       WELCOME %s !\n\n", user);
+	  printf("							 =========================================\n");
+      	  printf("								Press Enter to See The Rules!\n");
+	  printf("							 =========================================\n");
       getch();
       system("cls");
 	  rules();
       }
       else{
-            printf("====================\n");
-            printf("|  WRONG PASSWORD! |\n");
-            printf("====================\n");
-            printf("\n\nPress ENTER to Re-login!");
+            printf("								   ====================\n");
+            printf("								   |  WRONG PASSWORD! |\n");
+            printf("								   ====================\n");
+            printf("\n								 Press ENTER to Re-login!");
 	    getch();
             system("cls");
             goto login;
