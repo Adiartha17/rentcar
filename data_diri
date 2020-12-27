@@ -30,7 +30,7 @@ void kwitansi();
 
 int main()
 {
-    printf("\n                       ===============================================");
+    printf("\n                      ===============================================");
     printf("\n                      |                  WELCOME                    |");
     printf("\n                      |           CV. WISMA KARYA MOTOR             |");
     printf("\n                      |              Enjoy Your Ride                |");
@@ -70,8 +70,8 @@ void login()
 {
       char c,user[30],pass[30]; int z=0;
 {
-      printf("\n\n\t\t\t========================");
-      printf("\n\n\t\t\t\t       LOGIN");
+      printf("\n\t\t\t\t========================");
+      printf("\n\t\t\t\t       LOGIN");
       printf("\n\t\t\t\t========================");
       printf("\n\n\t\t\tUSERNAME: ");
       scanf("%s",user);
@@ -114,19 +114,20 @@ void rules()
     rules:
 
         printf("\n \n");
-        printf("	=========================================================================================================================================\n");
-        printf("        |                                                       	 RULES                                                                  |\n");
-        printf("	=========================================================================================================================================\n");
-        printf("	| 01.Vehicle renters must have a Driving License in accordance with the car being rented						|\n");
-        printf("	| 02.Have an ID Card that will be kept by the owner of CV Wisma Karya Motor during the rental period					|\n");
-        printf("	| 03.There are provisions for a charge if the lease time limit is exceeded with the price of charge equal to the			|\n");
-	printf("	|    rental price of the vehicle													|\n");
-        printf("	| 04.There are provisions for a charge if the vehicle being rented is damaged with a charge according to the cost of repairs		|\n");
-        printf("	| 05.The distance to use the rental vehicle is limited to the province									|\n");
-        printf("	| 06.Rental vehicles are not permitted for racing use											|\n");
-	printf("    	-----------------------------------------------------------------------------------------------------------------------------------------\n");
-	printf("	|							Click Enter To Continue								|\n");
-	printf("    	-----------------------------------------------------------------------------------------------------------------------------------------\n");
+        printf("=============================================================================================================\n");
+        printf("|                                                RULES                                                      |\n");
+        printf("=============================================================================================================\n");
+        printf("| 01.Vehicle renters must have a Driving License in accordance with the car being rented                    |\n");
+        printf("| 02.Have an ID Card that will be kept by the owner of CV Wisma Karya Motor during the rental period        |\n");
+        printf("| 03.There are provisions for a charge if the lease time limit is exceeded with the price of charge equal   |\n");
+        printf("|    to the rental price of the vehicle                                                                     |\n");
+        printf("| 04.There are provisions for a charge if the vehicle being rented is damaged with a charge according to the|\n");
+        printf("|    cost of repairs                                                                                        |\n");
+        printf("| 05.The distance to use the rental vehicle is limited to the province                                      |\n");
+        printf("| 06.Rental vehicles are not permitted for racing use                                                       |\n");
+        printf("-------------------------------------------------------------------------------------------------------------\n");
+        printf("|                                       Click Enter To Continue                                             |\n");
+        printf("-------------------------------------------------------------------------------------------------------------\n");
         getch();
         system("cls");
         dataDiri();
@@ -1892,6 +1893,7 @@ void mobilMitsubishi()
         }
 }
 void checkout(void){
+    printf ("\n\n");
     printf ("HOW MANY DAYS RENT A VEHICLE :");
     scanf  ("%d", &hari);
     printf ("", pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi);
@@ -2107,9 +2109,13 @@ void checkout(void){
                 printf ("Your Price Total : Rp.%.0f", totalbiaya);
             }
         
-	printf ("\n");
+	printf ("\n\n");
         printf ("===================================================\n");
+        printf ("---------------------------------------------------\n");
+        printf ("             THANK YOU FOR TRUSTING US             \n");
+        printf ("---------------------------------------------------\n");
         printf ("PLEASE GO TO OUR OFFICE TO GET YOUR PAYMENT RECEIPT\n");
+        printf ("---------------------------------------------------\n");
         printf ("===================================================\n");
         
 	getch();
