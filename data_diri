@@ -199,10 +199,10 @@ void menuUtama()
         printf(" ===============================\n");
         printf(" | Menu	:                      |\n");
         printf(" ===============================\n");
-        printf(" | 01. Motorcycle              |\n");
-        printf(" | 02. Car                     |\n");
+        printf(" | 1. Motorcycle               |\n");
+        printf(" | 2. Car                      |\n");
         printf(" ===============================\n");
-	printf(" | 00. EXIT                    |\n");
+	printf(" | 0. EXIT                     |\n");
         printf(" ===============================\n");
         printf(" | Choose Menu : ");
         scanf("%d", &menu);
@@ -234,10 +234,12 @@ void menuMotor()
         printf("===============================\n");
         printf("|  LIST OF MOTORCYCLES BRAND  |\n");
         printf("===============================\n");
-        printf("| 01. Honda                   |\n");
-        printf("| 02. Yamaha                  |\n");
-        printf("| 03. Kawasaki                |\n");
-        printf("| 04. Prestige                |\n");
+        printf("| 1. Honda                    |\n");
+        printf("| 2. Yamaha                   |\n");
+        printf("| 3. Kawasaki                 |\n");
+        printf("| 4. Prestige                 |\n");
+        printf("===============================\n");
+        printf("| 0. Back to Main Menu        |\n");
         printf("===============================\n");
         printf("Choose Menu : ");
         scanf("%d", &menu);
@@ -257,6 +259,19 @@ void menuMotor()
         case 4:
             motorPrestige();
             break;
+	    case 0:
+            printf("Press Enter to Return to Main Menu");
+            getch ();
+            system("cls");
+            menuUtama();
+            break;
+	default:
+	    printf("Invalid Number");
+	    printf("Please Input the Valid Number");
+	    printf("Press Enter to Re-Enter the Number");
+	    getch();
+	    system("cls");
+	    goto menumotor;
         }
 }
 
@@ -348,6 +363,8 @@ void motorHonda()
         printf("|Last Price             : 18/6/2020         |\n");
         printf("|Advisability           : 94/100            |\n");
         printf("|Rent Price             : Rp. 250.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+	printf("|0. Back to Vehicle Brand                   |\n");
         printf("|-------------------------------------------|\n");
         printf("Select your vehicle : ");
         scanf("%d", &pmHonda);
@@ -505,6 +522,12 @@ void motorHonda()
                     goto motorhonda;
                 }
             break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMotor();
+            break;
         default:
             printf("Invalid Number!");
             printf("Press Enter to Re-Choosing Your Vehicle");
@@ -576,6 +599,8 @@ void motorYamaha()
         printf("|Last Service           : 12/4/2020         |\n");
         printf("|Advisability           : 92/100            |\n");
         printf("|Rent Price             : Rp. 250.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+	printf("|0. Back to Vehicle Brand                   |\n");
         printf("|-------------------------------------------|\n");
 
         printf("Select your vehicle : ");
@@ -696,6 +721,12 @@ void motorYamaha()
                     goto motoryamaha;
                 }
             break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMotor();
+            break;
         default:
             printf("Invalid Number!");
             printf("Press Enter to Re-choosing Your Vehicle");
@@ -758,6 +789,8 @@ void motorKawasaki()
         printf("|Last Service           : 30/11/2020        |\n");
         printf("|Advisability           : 93/100            |\n");
         printf("|Rent Price             : Rp.220.000/day    |\n");
+        printf("|-------------------------------------------|\n");
+	printf("|0. Back to Vehicle Brand                   |\n");
         printf("|-------------------------------------------|\n");
         printf("Select your vehicle : ");
         scanf("%d", &pmKawasaki);
@@ -858,6 +891,12 @@ void motorKawasaki()
                     goto motorkawasaki;
                 }
             break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMotor();
+            break;
         default:
             printf("Invalid Number!");
             printf("Press Enter to Re-choosing Your Vehicle");
@@ -922,6 +961,8 @@ void motorPrestige()
         printf("|Topspeed               : 600cc             |\n");
         printf("|Advisability           : 92/100            |\n");
         printf("|Rent Price             : Rp. 760.000/day   |\n");
+        printf("|-------------------------------------------|\n");
+	printf("|0. Back to Vehicle Brand                   |\n");
         printf("|-------------------------------------------|\n");
         printf("Select your vehicle : ");
         scanf("%d", &pmPrestige);
@@ -1040,6 +1081,12 @@ void motorPrestige()
                     system("cls");
                     goto motorprestige;
                 }
+            break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMotor();
             break;
         default:
             printf("Invalid Number!");
