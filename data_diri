@@ -6,8 +6,8 @@
 
 char user[30], pass[30];
 int n;
-char nama[50], asal, alamat[100], jenisKelamin;
-int id, hp, menu, hari, pilihanmotor, pilihanMobil;
+char nama[50], asal[30], alamat[100], jenisKelamin[10], id [30], hp[15];
+int menu, hari, pilihanmotor, pilihanMobil;
 float totalbiaya;
 int pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi; //Pilihan motor & mobil sesuai dengan merk
 
@@ -65,10 +65,11 @@ int main()
     case 1:
         login();
         break;
-    default: printf("\n\n						      ================================\n");
+    default: 
+        printf("\n\n						              ================================\n");
     	printf("			                             	      |       NO MATCH FOUND!	     |\n");
 	printf("							      ================================\n");
-        printf("				                             Press Enter to re-Enter the choice");
+        printf("				                              Press Enter to re-Enter the choice");
 	getch();
         system("cls");
         goto Login;
@@ -168,10 +169,27 @@ void dataDiri()
         printf("Gender          : ");
         scanf("%s", &jenisKelamin);
         printf("KTP/Passport    : ");
-        scanf("%d", &id);
+        scanf("%s", &id);
         printf("Phone Number    : ");
-        scanf("%d", &hp);
+        scanf("%s", &hp);
         menuUtama();
+	
+    FILE * fPointer;
+    fPointer = fopen("datadiri.txt", "a");
+    fclose(fPointer);
+
+    fPointer = fopen("datadiri.txt", "a");
+    fprintf(fPointer, "\n");
+    fprintf(fPointer, "===============================\n");
+    fprintf(fPointer, "          PERSONAL DATA        \n");
+    fprintf(fPointer, "===============================\n");
+    fprintf(fPointer, "Name            : %s\n", &nama);
+    fprintf(fPointer, "Country         : %s\n", &asal);
+    fprintf(fPointer, "Address         : %s\n", &alamat);
+    fprintf(fPointer, "Gender          : %s\n", &jenisKelamin);
+    fprintf(fPointer, "KTP/Passport    : %s\n", &id);
+    fprintf(fPointer, "Phone Number    : %s\n", &hp);
+    fclose (fPointer);
 }
 
 void menuUtama()
@@ -183,6 +201,8 @@ void menuUtama()
         printf(" ===============================\n");
         printf(" | 01. Motorcycle              |\n");
         printf(" | 02. Car                     |\n");
+        printf(" ===============================\n");
+	printf(" | 00. EXIT                    |\n");
         printf(" ===============================\n");
         printf(" | Choose Menu : ");
         scanf("%d", &menu);
@@ -196,6 +216,9 @@ void menuUtama()
         case 2:
             menuMobil();
             break;
+	case 0:
+            printf("YOURE EXITING THE PROGRAM");
+            exit (0);
         default:
             printf("Invalid Menu!\n");
             printf("Please Re-Enter The Valid Menu\n");
@@ -1038,6 +1061,8 @@ void menuMobil()
         printf("2. HONDA\n");
         printf("3. DAIHATSU\n");
         printf("4. MITSUBISHI\n");
+	printf("===============================\n");
+        printf("0. Back to Main Menu\n");
         printf("===============================\n");
         printf("Choose Menu : ");
         scanf("%d", &menu);
@@ -1056,6 +1081,12 @@ void menuMobil()
             break;
         case 4:
             mobilMitsubishi();
+            break;
+	case 0:
+            printf("Press Enter to Return to Main Menu");
+            getch ();
+            system("cls");
+            menuUtama();
             break;
 	default:
             printf("Invalid Number!");
@@ -1149,6 +1180,8 @@ void mobilToyota()
         printf("|Last Date Of service   : 05/05/2020        |\n");
         printf("|Appropriateness        : 98/100            |\n");
         printf("|Rental Price           : Rp600.000/Day     |\n");
+        printf("|-------------------------------------------|\n");
+	printf("|0. Back to Vehicle Brand                   |\n");
         printf("|-------------------------------------------|\n");
 
         printf("Select your car : ");
@@ -1268,6 +1301,13 @@ void mobilToyota()
                     goto mobilToyota;
                 }
         break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMobil();
+        break;
+	    
 	default:
             printf("Invalid Number!");
             printf("Press Enter to Re-choosing Your Car!");
@@ -1360,6 +1400,8 @@ void mobilHonda()
         printf("|Last Date Of Service   :27/11/2020         |\n");
         printf("|Appropriateness        :75/100             |\n");
         printf("|Rental Price           :Rp800.000/Day      |\n");
+        printf("|-------------------------------------------|\n");
+	printf("|0. Back to Vehicle Brand                   |\n");
         printf("|-------------------------------------------|\n");
         
         printf("Select your Car : ");
@@ -1478,6 +1520,13 @@ void mobilHonda()
                      goto mobilHonda;
                 }
         break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMobil();
+        break;
+	    
 	default:
             printf("Invalid Number!");
             printf("Press Enter to Re-choosing Your Car!");
@@ -1571,7 +1620,8 @@ void mobilDaihatsu()
         printf("|Appropriateness        :80/100             |\n");
         printf("|Rental Price           :Rp600.000/Day      |\n");
         printf("|-------------------------------------------|\n");
-        
+	printf("|0. Back to Vehicle Brand                   |\n");
+        printf("|-------------------------------------------|\n");
         
         printf("Select your car : ");
         scanf("%d", &PMDaihatsu);
@@ -1689,6 +1739,13 @@ void mobilDaihatsu()
                     goto mobilDaihatsu;
                 }
         break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMobil();
+        break;
+	
 	default:
             printf("Invalid Number!");
             printf("Press Enter to Re-choosing Your Car!");
@@ -1781,6 +1838,8 @@ void mobilMitsubishi()
         printf("|Last Date Of Service   :15/11/2020         |\n");
         printf("|Appropriateness        :95/100             |\n");
         printf("|Rental Price           :Rp900.000/Day      |\n");
+        printf("|-------------------------------------------|\n");
+	printf("|0. Back to Vehicle Brand                   |\n");
         printf("|-------------------------------------------|\n");
 
         printf("Select your car : ");
@@ -1899,6 +1958,13 @@ void mobilMitsubishi()
                     goto mobilMitsubishi;
                 }
         break;
+	case 0:
+            printf("Press Enter to Return to Motorcycles Brand Menu");
+            getch ();
+            system("cls");
+            menuMobil();
+        break;
+	
 	default:
             printf("Invalid Number!");
             printf("Press Enter to Re-choosing Your Car!");
@@ -1908,7 +1974,13 @@ void mobilMitsubishi()
         }
 }
 void checkout(void){
-    printf ("\n\n");
+    struct tm *Sys_T;
+    time_t Tval;
+    Tval = time(NULL);
+    Sys_T = localtime(&Tval);
+
+    printf ("===================================================\n");
+    printf ( "Date and time : %s", asctime (Sys_T));
     printf ("HOW MANY DAYS RENT A VEHICLE :");
     scanf  ("%d", &hari);
     printf ("", pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi);
@@ -2138,12 +2210,18 @@ void checkout(void){
 
 }
 void kwitansi(){
+    struct tm *Sys_T;
+    time_t Tval;
+    Tval = time(NULL);
+    Sys_T = localtime(&Tval);
+    
     FILE * fPointer;
     fPointer = fopen("rentcar.txt", "a");
     fclose(fPointer);
 
     fPointer = fopen("rentcar.txt", "a");
     fprintf(fPointer, "\n");
+    fprintf(fPointer, "\n Date and time : %s\n", asctime (Sys_T));
     fprintf(fPointer, "\t\t\t=============================\n");
     fprintf(fPointer, "\t\t\t --------------------------- \n");
     fprintf(fPointer, "\t\t\t       PAYMENT RECEIPT       \n");
@@ -2152,6 +2230,7 @@ void kwitansi(){
     fprintf(fPointer, "\t\t\t=============================\n");
     fprintf(fPointer, "NAME\t\t\t\t: %s\n", &nama);
     fprintf(fPointer, "ORDERS DETAIL\t\t\t: \n\n");
+    fprintf(fPointer, "HOW MANY DAYS RENT A VEHICLE: %d\n\n", hari);
     fprintf(fPointer, "", pmHonda, pmYamaha, pmKawasaki, pmPrestige, PMToyota, PMHonda, PMDaihatsu, PMMitsubishi);
     
         if (pmHonda==1){
